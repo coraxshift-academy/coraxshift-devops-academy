@@ -63,7 +63,7 @@ On Windows it stops by itself after 4 replies.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=25.123 ms
 On Mac or Linux it keeps going. Press Ctrl + C to stop it.
 
-**What it means: **
+**What it means:**
 You got a reply. Internet works. Your time number will be different. That is okay.
 
 If you see Request timed out or Network is unreachable, your WiFi is off. Check WiFi, run again.
