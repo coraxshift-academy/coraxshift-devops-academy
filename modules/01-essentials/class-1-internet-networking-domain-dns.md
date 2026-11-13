@@ -26,13 +26,21 @@ That line is called a prompt. It means the computer is waiting for you to type.
 
 ## Definitions for this class
 Terminal: The app where you type commands.
+
 Command: A typed instruction. Example: ping google.com
+
 Internet: A network that connects computers around the world.
+
 IP Address: The number address of a computer. Example: 8.8.8.8
+
 DNS: The phonebook of the internet. It turns a name like google.com into an IP.
+
 Server: A computer that waits to answer requests.
+
 Ping: A command that sends a small test message and waits for a reply.
+
 Nslookup: A command that asks your DNS server: What is the IP for this name?
+
 Domain: A name you buy, like coraxreads.com.
 
 ## Step 1: Check internet with an IP
