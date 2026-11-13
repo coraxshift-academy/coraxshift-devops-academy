@@ -1,10 +1,15 @@
-# Class 3: Processes, Networking, System Info, Shell Scripting, Project
+
+
+# **Class 3: Processes, Networking, System Info, Shell Scripting, Project**
+
 Time: 2 hours
 
-## Where to run commands
+## **Where to run commands**
+
 You are in Codespace terminal. You are already in Ubuntu.
 
-## Definitions for this class
+## **Definitions for this class**
+
 Process: A program running right now.
 Port: A number door for network traffic. Example: 80 for HTTP, 22 for SSH.
 Log: A file that records what happened. Example: /var/log/nginx/access.log
@@ -12,7 +17,8 @@ Shell Script: A file with Linux commands that run one after another.
 Nginx: Web server that serves your website.
 Web Root: Folder Nginx serves. /var/www/html
 
-## Step 1: Monitoring and controlling processes
+## **Step 1: Monitoring and controlling processes**
+
 Type:
 ps aux | head -n 20
 ps aux | grep nginx | grep -v grep
@@ -30,7 +36,8 @@ ps aux | grep nginx
 
 Expected output: You see nginx master and worker processes.
 
-## Step 2: Networking commands in Linux
+## **Step 2: Networking commands in Linux**
+
 Type:
 ip a
 ip route
@@ -53,7 +60,8 @@ curl shows HTTP/1.1 200 OK
 
 If curl shows 200 OK, Nginx is working.
 
-## Step 3: System Information Commands
+## **Step 3: System Information Commands**
+
 Type:
 hostname
 lsb_release -a
@@ -72,7 +80,8 @@ du -sh: Size of folders inside /var, sorted
 
 Expected output: You see your hostname, Ubuntu 24.04, memory, disk, and /var folders sorted.
 
-## Step 4: Shell Scripting Introduction
+## **Step 4: Shell Scripting Introduction**
+
 Type:
 nano practice/week2/check.sh
 
@@ -95,7 +104,8 @@ chmod +x: Make it runnable
 
 Expected output: You see Checking..., uptime, memory, disk, and HTTP 200 OK.
 
-## Step 5: Project Finalization - Deploy CoraxReads locally
+## **Step 5: Project Finalization - Deploy CoraxReads locally**
+
 Type:
 sudo apt install -y nginx
 sudo service nginx start
@@ -119,5 +129,6 @@ Your CoraxReads HTML with your name
 
 To see it in browser: In Codespace, click Ports tab at bottom, Forward a Port, type 80, click globe icon.
 
-## Push
+## **Push**
+
 Push your check.sh script and your maintenance notes.

@@ -1,10 +1,15 @@
-# Class 2: Editors, Package Manager, Sudo, Permissions, Users, Compression
+
+
+# **Class 2: Editors, Package Manager, Sudo, Permissions, Users, Compression**
+
 Time: 2 hours
 
-## Where to run commands
+## **Where to run commands**
+
 You are in Codespace terminal. You are already in Ubuntu.
 
-## Definitions for this class
+## **Definitions for this class**
+
 Editor: An app to write files. In Linux we use nano.
 Package manager: Tool to install software. On Ubuntu it is apt.
 Sudo: Run as admin. Example: sudo apt update
@@ -13,7 +18,8 @@ Owner: The user who owns the file.
 Group: A set of users who share permissions.
 Compression: Making files smaller to store or send. Example: tar, gzip, zip.
 
-## Step 1: Text editor nano
+## **Step 1: Text editor nano**
+
 Type:
 nano practice/week2/note.txt
 
@@ -25,7 +31,8 @@ cat practice/week2/note.txt
 
 Expected output: You see your note.
 
-## Step 2: Package manager and sudo
+## **Step 2: Package manager and sudo**
+
 Type:
 sudo apt update -y
 sudo apt install -y nginx nodejs npm
@@ -41,7 +48,8 @@ node -v: Shows Node version
 
 Expected output: Versions shown. Your numbers will be different. That is okay. Do not run apt upgrade -y in Codespace unless you need it, it takes long.
 
-## Step 3: File and Directory Permissions
+## **Step 3: File and Directory Permissions**
+
 Type:
 ls -l practice/week2/note.txt
 chmod 755 practice/week2/note.txt
@@ -68,7 +76,8 @@ sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 755 /var/www/html
 chown changes owner. www-data is the Nginx user.
 
-## Step 4: Managing users and groups
+## **Step 4: Managing users and groups**
+
 Type:
 whoami
 id
@@ -82,7 +91,8 @@ cat /etc/passwd: Shows users on the system
 
 Expected output: You see codespace user, with groups. Do not create a new user in Codespace unless you need to, your Codespace user is enough for Week 2. In a real VM, you would use sudo adduser newname to create a user.
 
-## Step 5: Compression and Archive
+## **Step 5: Compression and Archive**
+
 Type:
 cd practice/week2
 tar -czf notes.tar.gz note.txt hello.txt
@@ -104,5 +114,6 @@ sudo apt install -y unzip zip
 zip notes.zip practice/week2/note.txt
 unzip -l notes.zip
 
-## Push
+## **Push**
+
 Push your notes: Explain 755 vs 644 in your own words, and what chown does.

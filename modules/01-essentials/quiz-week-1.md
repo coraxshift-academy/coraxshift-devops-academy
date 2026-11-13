@@ -1,11 +1,15 @@
-# Quiz Week 1: Knowledge Test
+
+
+# **Quiz Week 1: Knowledge Test**
+
 12 questions, 20 minutes. 8 Choose ONE, 4 Choose ALL that apply.
 Score 90 percent, 11 out of 12, earns Week 1 Badge. One retake if below.
 
-## Rules
+## **Rules**
+
 Do not look at answers before you try. Every question is from a lab we did this week.
 
-## Questions
+## **Questions**
 
 Q1 - Choose ONE
 You run ping 8.8.8.8 and get replies. You run ping google.com and get could not resolve host. What is most likely broken?
@@ -103,6 +107,7 @@ C. Database stores the data
 D. Frontend talks directly to Database in three-tier
 Answers: A, B, C. Explanation: A is true, Frontend is the UI. B is true, Backend is the logic. C is true, Database stores data. D is false, in three-tier Frontend talks to Backend, Backend talks to Database. Direct Frontend to Database is two-tier.
 
-## Scoring
+## **Scoring**
+
 11 to 12: Pass, earn Week 1 Badge
 Below 11: One retake allowed, review Class 1 and Class 2 first

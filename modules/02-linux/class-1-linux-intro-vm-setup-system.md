@@ -1,10 +1,15 @@
-# Class 1: Linux Intro, Setup, System Control, File Navigation
+
+
+# **Class 1: Linux Intro, Setup, System Control, File Navigation**
+
 Time: 2 hours
 
-## Where to run commands
+## **Where to run commands**
+
 You are in Codespace terminal. You are already in Ubuntu. Do not open another terminal.
 
-## Definitions for this class
+## **Definitions for this class**
+
 OS: Operating System, the main software that runs your computer.
 Linux: An OS used for most servers.
 Ubuntu: A version of Linux.
@@ -14,7 +19,8 @@ Prompt: The line waiting for you to type. Example: codespace@...
 Directory: Another word for folder.
 Home: Your main folder. In Codespace it is /home/codespace
 
-## Step 1: Check your Linux
+## **Step 1: Check your Linux**
+
 Type:
 cat /etc/os-release
 whoami
@@ -33,7 +39,8 @@ codespace
 /workspaces/coraxshift-devops-academy
 Your version numbers may be slightly different. That is okay.
 
-## Step 2: System control commands
+## **Step 2: System control commands**
+
 Type:
 uptime
 free -h
@@ -51,7 +58,8 @@ df -h shows Size, Used, Avail, Use percent
 
 What it means: Your server has memory and disk. If disk is 100 percent full, logs stop, apps fail.
 
-## Step 3: File navigation commands
+## **Step 3: File navigation commands**
+
 You are still in terminal. Type one by one:
 ls
 ls -la
@@ -70,7 +78,8 @@ cd: Change directory. cd .. means go up one level
 
 Expected output: You see your folders. After mkdir and cd, pwd shows .../practice/week2. After cd .., pwd shows .../practice
 
-## Step 4: File System Hierarchy
+## **Step 4: File System Hierarchy**
+
 Type:
 ls /
 ls /var
@@ -85,7 +94,8 @@ Plain words:
 - /var : Where logs and websites live. Example: /var/log/nginx, /var/www/html
 - /tmp : Temporary files
 
-## Step 5: Create and read a file
+## **Step 5: Create and read a file**
+
 Type:
 echo "Hello CoraxShift" > practice/week2/hello.txt
 cat practice/week2/hello.txt
@@ -104,5 +114,6 @@ rm: Delete a file
 
 Expected output: After cat, you see Hello CoraxShift. After ls, you see the files. After rm, the moved file is gone.
 
-## Push
+## **Push**
+
 Push your notes: What is Linux, what is your Ubuntu version, and what did ls / show?

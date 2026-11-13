@@ -1,4 +1,6 @@
-# Technical Standard - No ABC Questions
+
+
+# **Technical Standard - No ABC Questions**
 
 1. No What does X stand for questions.
 2. Every question must be scenario, output, or fix based.
@@ -6,9 +8,12 @@
 4. Every explanation must explain why the correct answer is correct AND why each wrong answer is wrong.
 5. If a student can pass without doing the lab, the question is too easy. Rewrite it.
    
-# CoraxShift Quiz and Badge System - Weekly
 
-## Quiz Rules
+
+# **CoraxShift Quiz and Badge System - Weekly**
+
+## **Quiz Rules**
+
 - 1 quiz per week, at the end of Class 3
 - 12 questions per week, inside the 10 to 15 range
 - 8 questions: Choose ONE
@@ -17,13 +22,15 @@
 - After each question, read the explanation. It explains why the correct answer is correct and why the others are wrong.
 - Use Google Forms for auto grading.
 
-## Badge Rules
+## **Badge Rules**
+
 - Score 90% and above, 11 out of 12, to earn the Week Badge
 - Score below 90%, review the explanations and retake once
 - Badge is added to your portfolio README
 - 12 badges in total, one per week
 
-## Badges
+## **Badges**
+
 Week 1: Essentials Passed
 Week 2: Linux Passed
 Week 3: Bash Passed
@@ -37,6 +44,7 @@ Week 10: Kubernetes Passed
 Week 11: Monitoring and CI/CD Passed
 Week 12: Capstone Graduate
 
-## Interactive Rule
+## **Interactive Rule**
+
 Every class is interactive: live demo, live fix, students share screen.
 Every week ends with quiz + live discussion. Each student shares one thing that broke and how they fixed it.

@@ -1,8 +1,11 @@
-# Quiz Week 2: Linux for DevOps
+
+
+# **Quiz Week 2: Linux for DevOps**
+
 12 questions, 20 minutes. 8 Choose ONE, 4 Choose ALL that apply.
 Score 90 percent, 11 out of 12, earns Week 2 Badge. One retake if below.
 
-## Questions
+## **Questions**
 
 Q1 - Choose ONE
 You run ls -l and see -rwxr-xr-x for a file. What does it mean?
@@ -100,6 +103,7 @@ C. chmod 777 is safe for production
 D. You should verify with ls -l after changing
 Answers: A, B, D. Explanation: A is true, www-data is Nginx user. B is true, 755 is safe for web root. C is false, 777 lets everyone write, unsafe. D is true, always verify.
 
-## Scoring
+## **Scoring**
+
 11 to 12: Pass, earn Week 2 Badge
 Below 11: One retake allowed, review Class 1 and Class 2 first
