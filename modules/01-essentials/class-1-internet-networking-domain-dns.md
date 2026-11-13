@@ -2,7 +2,9 @@
 Time: 2 hours
 
 ## Where to run commands
-We run commands in a terminal. It is a window where you type words and the computer answers. You do not run them in your browser.
+We run commands in a terminal. 
+It is a window where you type words and the computer answers. 
+You do not run them in your browser.
 
 If you use Windows:
 1. Press Windows key
@@ -34,10 +36,12 @@ Nslookup: A command that asks your DNS server: What is the IP for this name?
 Domain: A name you buy, like coraxreads.com.
 
 ## Step 1: Check internet with an IP
-You are in your terminal. Type this and press Enter:
+You are in your terminal. 
+Type this and press Enter:
 ping 8.8.8.8
 
-What it does: Sends a test message to 8.8.8.8, which is Google DNS. We use an IP, not a name, so we test internet only, not DNS.
+What it does: Sends a test message to 8.8.8.8, which is Google DNS. 
+We use an IP, not a name, so we test internet only, not DNS.
 
 Expected output on Windows:
 Reply from 8.8.8.8: bytes=32 time=25ms TTL=115
@@ -47,7 +51,8 @@ Expected output on Mac or Linux:
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=25.123 ms
 On Mac or Linux it keeps going. Press Ctrl + C to stop it.
 
-What it means: You got a reply. Internet works. Your time number will be different. That is okay.
+What it means: 
+You got a reply. Internet works. Your time number will be different. That is okay.
 
 If you see Request timed out or Network is unreachable, your WiFi is off. Check WiFi, run again.
 
