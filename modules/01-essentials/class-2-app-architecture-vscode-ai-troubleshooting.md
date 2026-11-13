@@ -32,9 +32,11 @@ Three-tier: Frontend + Backend + Database. Frontend talks to Backend, Backend ta
 
 Example stack for CoraxReads:
 
-Frontend: HTML, CSS, JavaScript
-Backend: Node.js + 【entity-Express¦canonical_name=Express】
-Database: PostgreSQL
+**Frontend:** HTML, CSS, JavaScript
+
+**Backend:** Node.js + Express
+
+**Database:** PostgreSQL
 
 ## Part 2: VS Code Editor
 Steps:
