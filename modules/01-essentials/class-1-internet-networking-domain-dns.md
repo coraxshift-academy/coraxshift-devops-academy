@@ -52,44 +52,58 @@ and press Enter
 
 
 
-**What it does:** Sends a test message to 8.8.8.8, which is Google DNS. 
+**What it does:** 
+
+Sends a test message to 8.8.8.8, which is Google DNS. 
 We use an IP, not a name, so we test internet only, not DNS.
 
 **Expected output on Windows:**
+
 Reply from 8.8.8.8: bytes=32 time=25ms TTL=115
 On Windows it stops by itself after 4 replies.
 
 **Expected output on Mac or Linux:**
+
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=25.123 ms
 On Mac or Linux it keeps going. Press Ctrl + C to stop it.
 
 **What it means:**
+
 You got a reply. Internet works. Your time number will be different. That is okay.
 
 If you see Request timed out or Network is unreachable, your WiFi is off. Check WiFi, run again.
 
 ## Step 2: Check names with DNS
-You are still in your terminal. Type:
-ping google.com
 
-**What it does:** First asks DNS to turn google.com into an IP, then pings that IP.
+You are still in your terminal. 
+Type: ping google.com
+
+**What it does:** 
+
+First asks DNS to turn google.com into an IP, then pings that IP.
 
 **Expected output on Windows:**
+
 Pinging google.com [142.250.80.46] with 32 bytes of data:
 Reply from 142.250.80.46: bytes=32 time=24ms TTL=115
-**
-Expected output on Mac or Linux:**
+
+**Expected output on Mac or Linux:**
+
 PING google.com (142.250.80.46): 56 data bytes
 64 bytes from 142.250.80.46: icmp_seq=0 ttl=115 time=24.123 ms
 Press Ctrl + C to stop it.
 
-**What it means:** DNS worked. It turned the name into 142.250.80.46. Your IP will be different. That is okay. Google has many IPs.
+**What it means:** 
+
+DNS worked. It turned the name into 142.250.80.46. 
+Your IP will be different. That is okay. Google has many IPs.
 
 If you see could not find host or could not resolve host, DNS is broken, even if Step 1 worked. That is the key lesson.
 
 ## Step 3: See DNS working with nslookup
-You are still in your terminal. Type:
-nslookup google.com
+
+You are still in your terminal. 
+Type: nslookup google.com
 
 **What it does:** Asks your DNS server directly for the IP.
 
