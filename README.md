@@ -1,4 +1,4 @@
-# CoraxShift DevOps Academy
+**# CoraxShift DevOps Academy
 
 Learn DevOps by building, not by watching.
 
@@ -30,3 +30,4 @@ Week 4: Monitoring + Capstone - Make it professional
 3. If it breaks, fix it. That is the real DevOps skill.
 
 Welcome to CoraxShift. Let us build.
+**
