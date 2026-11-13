@@ -1,3 +1,11 @@
+# Technical Standard - No ABC Questions
+
+1. No What does X stand for questions.
+2. Every question must be scenario, output, or fix based.
+3. Every question must come from something we did in the lab that week.
+4. Every explanation must explain why the correct answer is correct AND why each wrong answer is wrong.
+5. If a student can pass without doing the lab, the question is too easy. Rewrite it.
+   
 # CoraxShift Quiz and Badge System - Weekly
 
 ## Quiz Rules
