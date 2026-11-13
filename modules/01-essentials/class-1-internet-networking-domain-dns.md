@@ -45,7 +45,9 @@ Internet:** A network that connects computers around the world.
 
 ## Step 1: Check internet with an IP
 You are in your terminal. 
+
 Type this and press Enter:
+
 ping 8.8.8.8
 
 **What it does:** Sends a test message to 8.8.8.8, which is Google DNS. 
