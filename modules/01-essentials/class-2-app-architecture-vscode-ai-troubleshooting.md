@@ -8,12 +8,19 @@ You will run commands in two places today:
 
 ## Definitions for this class
 Frontend: What the user sees. Example: HTML page.
+
 Backend: What does the work. Example: Node.js code that answers requests.
+
 Database: Where data is stored. Example: PostgreSQL.
+
 Architecture: How the parts are arranged and how they talk.
+
 VS Code: The editor where we write code.
+
 Integrated Terminal: A terminal inside VS Code. Shortcut: Ctrl + ` on Windows, Mac, Linux.
+
 Prompt: A typed instruction to AI. A good prompt has context.
+
 Troubleshooting: Finding what broke, fixing it, and writing it down.
 
 ## Part 1: App Architecture and Stack
@@ -24,6 +31,7 @@ Two-tier: Frontend + Database. Frontend talks straight to Database. Simple, but 
 Three-tier: Frontend + Backend + Database. Frontend talks to Backend, Backend talks to Database. Easier to grow and secure. This is what we use in CoraxShift.
 
 Example stack for CoraxReads:
+
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js + 【entity-Express¦canonical_name=Express】
 Database: PostgreSQL
