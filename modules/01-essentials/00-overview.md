@@ -38,3 +38,18 @@ Then: Quiz Week 1 + Assignment 1
 - You can explain DNS in plain words
 - You can open VS Code, open terminal inside it, and run whoami
 - Your assignment folder is on GitHub
+
+## Lessons
+
+- [Class 1: Internet, networking, domain, and DNS](class-1-internet-networking-domain-dns.md)
+- [Class 2: App architecture, VS Code, AI, and troubleshooting](class-2-app-architecture-vscode-ai-troubleshooting.md)
+- [Class 3: Asking questions and review](class-3-asking-questions-review.md)
+- [Assignment 1](assignment-1.md)
+- [Troubleshooting](troubleshooting.md)
+- [Quiz Week 1](quiz-week-1.md)
+- [Role play](role-play-1.md)
+
+## Official reference
+
+- [Cloudflare Learning Center: What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/)
+- [Microsoft Learn: Windows command line](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)

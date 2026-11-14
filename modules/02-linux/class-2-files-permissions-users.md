@@ -35,24 +35,19 @@ Expected output: You see your note.
 
 Type:
 sudo apt update -y
-sudo apt install -y nginx nodejs npm
+sudo apt install -y nginx
 nginx -v
-node -v
-npm -v
 
 What it does:
 apt update: Refresh list of software
 apt install: Install software. -y means yes, do not ask again
 nginx -v: Shows Nginx version
-node -v: Shows Node version
 
-Expected output: Versions shown. Your numbers will be different. That is okay. Do not run apt upgrade -y in Codespace unless you need it, it takes long.
+Expected output: The Nginx version is shown. Your version may be different. That is okay. We install only what this week's lab needs; Node.js comes later in the course. Do not run apt upgrade -y in Codespace unless you need it, it takes long.
 
 ## **Step 3: File and Directory Permissions**
 
 Type:
-ls -l practice/week2/note.txt
-chmod 755 practice/week2/note.txt
 ls -l practice/week2/note.txt
 chmod 644 practice/week2/note.txt
 ls -l practice/week2/note.txt
@@ -67,14 +62,14 @@ Next 3: Owner can read, write, run. rwx
 Next 3: Group can read and run, not write. r-x
 Last 3: Others can read and run, not write. r-x
 
-chmod 755 means: Owner rwx, Group r-x, Others r-x. Good for websites.
-chmod 644 means: Owner rw-, Group r--, Others r--. Good for normal files.
+chmod 755 means: Owner rwx, Group r-x, Others r-x. Common for directories that people need to enter and list.
+chmod 644 means: Owner rw-, Group r--, Others r--. Common for files that need to be read but not run.
 chmod 777 means everyone can do everything. Do not use it in production. It is unsafe.
 
-For Nginx web root, we use:
-sudo chown -R www-data:www-data /var/www/html
-sudo chmod -R 755 /var/www/html
-chown changes owner. www-data is the Nginx user.
+For this static practice page, keep the files owned by the administrator and let Nginx read them:
+sudo chmod 755 /var/www/html
+sudo chmod 644 /var/www/html/index.html
+Nginx needs to read the page; it does not need permission to change it. Avoid making the web server the owner of files it only serves.
 
 ## **Step 4: Managing users and groups**
 

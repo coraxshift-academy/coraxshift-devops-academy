@@ -5,15 +5,15 @@
 Time: 120 to 180 minutes
 Level: Beginner to Intermediate
 Submit in: Your portfolio repo, in folder modules/02-linux/assignment-2
-Rule: No AWS, no EC2. Use Codespaces as your server.
+Rule: No AWS and no EC2. Use Codespaces as a temporary practice environment, not as a production server.
 
 ## **Overview**
 
-You will deploy a site locally with Nginx, then act as on-call engineer and do a maintenance drill.
+You will serve a practice page locally with Nginx, then act as an on-call engineer and do a maintenance drill.
 
 ## **Scenario**
 
-CoraxReads wants a site. You will deploy it in Codespace with Nginx, personalize it, then check health, logs, resources, and recover from two breaks.
+CoraxReads wants a site. You will serve a practice page in a Codespace with Nginx, personalize it, check health, logs, and resources, then recover from two safe practice failures.
 
 ## **Learning Outcomes**
 
@@ -26,34 +26,39 @@ CoraxReads wants a site. You will deploy it in Codespace with Nginx, personalize
 ## **Rules**
 
 1. Write in your own words.
-2. All screenshots must show your own Codespace, your own username codespace, your own terminal.
+2. Screenshots should show the relevant Codespace and terminal output. Use a display name; do not expose personal information you do not want to share.
 3. Do not paste passwords, tokens, or keys.
-4. Keep Tasks 1 to 8 in order.
+4. Keep Tasks 1 to 9 in order.
 
 ## **Task 1 - Setup and Verify Linux**
 
 Steps: Run cat /etc/os-release, whoami, pwd, hostname, uptime, free -h, df -h
 What to submit: Screenshot 1 - Output of uptime, free -h, df -h
 
-## **Task 2 - Install Nginx and Node**
+## **Task 2 - Install Nginx**
 
-Steps: sudo apt update -y, sudo apt install -y nginx nodejs npm, then nginx -v, node -v, npm -v, sudo service nginx start, sudo service nginx status, curl -I http://localhost
-What to submit: Screenshot 2 - Output of curl -I http://localhost showing 200 OK, and nginx -v
+Steps: Run `sudo apt update`, then `sudo apt install -y nginx`. Check the version with `nginx -v`, start it with `sudo service nginx start`, check it with `sudo service nginx status`, and test the page with `curl -I http://localhost`.
+What to submit: Screenshot 2 - Output of `curl -I http://localhost` showing a successful response, and the Nginx version.
 
 ## **Task 3 - Personalize CoraxReads**
 
-Steps: Create index.html with your Full Name and Date. Use: echo '<h1>CoraxReads</h1><h2>Deployed by: Your Full Name</h2><p>Date: DD-MM-YYYY</p>' | sudo tee /var/www/html/index.html
-What to submit: Screenshot 3 - Output of cat /var/www/html/index.html showing your name
+Steps: Create `index.html` with CoraxReads and a display name (a first name or chosen name is fine). For example:
+
+```bash
+echo '<h1>CoraxReads</h1><h2>Made by: Your Display Name</h2><p>Date: DD-MM-YYYY</p>' | sudo tee /var/www/html/index.html
+```
+
+What to submit: Screenshot 3 - Output of `cat /var/www/html/index.html`. Do not include personal details you do not want to share.
 
 ## **Task 4 - Deploy with Correct Permissions**
 
-Steps: sudo chown -R www-data:www-data /var/www/html, sudo chmod -R 755 /var/www/html, ls -l /var/www/html, sudo nginx -t, sudo service nginx restart, curl http://localhost
-What to submit: Screenshot 4 - Output of ls -l /var/www/html and nginx -t showing syntax is ok
+Steps: Keep the practice page owned by the administrator. Set directory permissions with `sudo chmod 755 /var/www/html` and page permissions with `sudo chmod 644 /var/www/html/index.html`. Check with `ls -l /var/www/html`, test with `sudo nginx -t`, and only if the test succeeds, run `sudo service nginx restart`. Verify with `curl http://localhost`.
+What to submit: Screenshot 4 - Output of `ls -l /var/www/html` and `sudo nginx -t` showing the syntax test succeeded.
 
 ## **Task 5 - Networking and Service Check**
 
-Steps: ip a, ip route, ping -c 4 google.com, sudo ss -tuln, sudo service nginx status
-What to submit: Screenshot 5 - Output of sudo ss -tuln showing port 80, plus notes: What proves Nginx is listening on 80? What proves SSH is active on 22? Any unexpected ports?
+Steps: Run `ip a`, `ip route`, `ping -c 4 google.com`, `sudo ss -tulpn`, and `sudo service nginx status`.
+What to submit: Screenshot 5 - Output of `sudo ss -tulpn` and notes: Which process is listening on port 80? Is anything listening on port 22? In Codespaces, do not expect an SSH server on port 22; the VS Code connection does not require one. Note any listener you do not recognize and ask before stopping it.
 
 ## **Task 6 - Logs and Resources**
 
@@ -62,13 +67,44 @@ What to submit: Screenshot 6 - Output of access.log and error.log, plus notes: W
 
 ## **Task 7 - Break and Fix Drill 1 - Nginx Config**
 
-Steps: sudo nano /etc/nginx/sites-available/default, remove ; from try_files $uri /index.html; line, run sudo nginx -t, see FAIL, re-add ;, run sudo nginx -t, see OK, sudo service nginx restart, curl -I http://localhost
-What to submit: Screenshot 7 - Output of nginx -t FAIL, then OK, then curl 200 OK, plus notes: What caused failure? How did you fix? How to avoid in production?
+This drill uses a temporary test file so you do not break the real Nginx site.
+
+1. Create the test configuration:
+
+```bash
+sudo tee /tmp/nginx-lab.conf >/dev/null <<'EOF'
+events {}
+http {
+  server {
+    listen 8081;
+    location / { return 200 "Lab OK\n"; }
+  }
+}
+EOF
+```
+
+2. Save a backup with `sudo cp /tmp/nginx-lab.conf /tmp/nginx-lab.conf.backup`.
+3. Test it with `sudo nginx -t -c /tmp/nginx-lab.conf`. It should pass.
+4. Open the temporary file with `sudo nano /tmp/nginx-lab.conf` and remove the semicolon after `listen 8081`.
+5. Test again. It should fail. Restore the known-good copy with `sudo cp /tmp/nginx-lab.conf.backup /tmp/nginx-lab.conf`, then test again. It should pass.
+
+Do not restart Nginx during this drill; you are only testing a temporary file.
+
+What to submit: Screenshot 7 - The failed test and the passing test after restoring the backup, plus notes: What caused the failure? Why is testing before applying a change safer?
 
 ## **Task 8 - Break and Fix Drill 2 - Missing Web Root**
 
-Steps: sudo mv /var/www/html /var/www/html_backup, sudo mkdir -p /var/www/html, curl -I http://localhost, see fail, then sudo rm -rf /var/www/html, sudo mv /var/www/html_backup /var/www/html, sudo service nginx restart, curl -I http://localhost, see 200 OK
-What to submit: Screenshot 8 - Output of curl fail, then curl 200 OK, plus notes: What caused break? How did you fix? How to prevent in production?
+Use an empty Codespace lab. Before starting, check that `/var/www/html` exists and `/var/www/html_backup` does not. If the backup path already exists, stop and ask for help.
+
+1. Move the web root aside: `sudo mv /var/www/html /var/www/html_backup`.
+2. Create an empty web root: `sudo mkdir /var/www/html`.
+3. Show the HTTP status: `curl -s -o /dev/null -w 'HTTP %{http_code}\n' http://localhost`. An HTTP error status is expected; `curl` itself may still exit successfully.
+4. Restore the original folder safely: `sudo rmdir /var/www/html` (this only removes an empty directory), then `sudo mv /var/www/html_backup /var/www/html`.
+5. Verify the page with `curl -I http://localhost`.
+
+Do not use `rm -rf` for this exercise. Restore the original folder immediately.
+
+What to submit: Screenshot 8 - The HTTP status before and after restoring the web root, plus notes: What caused the error? How did you restore the site safely?
 
 ## **Task 9 - LinkedIn Post**
 
@@ -78,8 +114,8 @@ What to submit: Screenshot 9 - Published LinkedIn post plus URL.
 ## **Submission Checklist**
 
 - Tasks 1 to 9 in order
-- Screenshots 1 to 9, readable, with your username
-- No secrets exposed
+- Screenshots 1 to 9, readable, with personal details hidden or limited to a chosen display name
+- No passwords, tokens, keys, or personal information you do not want to publish
 - All writing in your own words
 - LinkedIn post with CoraxShift credit
 

@@ -85,11 +85,11 @@ Answers: A, B. Explanation: A is true because packets can travel by different pa
 
 Q10 - Choose ALL that apply
 Which are true about TCP/IP?
-A. TCP breaks data into packets
+A. TCP divides application data into segments
 B. IP addresses each packet
-C. TCP makes sure packets arrive in order
+C. TCP provides ordered delivery to the application
 D. HTTP is the same thing as TCP
-Answers: A, B, C. Explanation: A is true, TCP splits data. B is true, IP handles addresses. C is true, TCP handles order and resend. D is false, HTTP is the web protocol that uses TCP/IP, not the same as TCP.
+Answers: A, B, C. Explanation: A is true because TCP divides a byte stream into segments; IP then carries data in packets. B is true because IP uses source and destination addresses. C is true because TCP reorders received data and retransmits missing data where needed. D is false because HTTP is an application protocol that uses lower-level transport/network protocols.
 
 Q11 - Choose ALL that apply
 Which are good questions?

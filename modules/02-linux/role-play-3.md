@@ -14,7 +14,7 @@ Explain in 1 minute what you check, in order, in plain words.
 
 ## **Example script in your own words**
 
-First I check if Nginx is running with service nginx status. Then I check logs with tail -n 30 /var/log/nginx/error.log to see errors. Then I check resources with free -h and df -h to see if memory or disk is full. Then I check if port 80 is listening with ss -tuln. If I find a break, I fix it, test with nginx -t, restart, and check with curl -I http://localhost.
+First I check if Nginx is running with service nginx status. Then I check logs with tail -n 30 /var/log/nginx/error.log to see errors. Then I check resources with free -h and df -h to see if memory or disk is full. Then I check which process is listening with sudo ss -tulpn. If I find a break, I fix it, test with nginx -t, restart, and check with curl -I http://localhost. In Codespaces, I do not expect an SSH server on port 22.
 
 ## **Pass check**
 

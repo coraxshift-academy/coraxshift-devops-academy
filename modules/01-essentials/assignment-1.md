@@ -29,7 +29,7 @@ By the end, you will be able to:
 
 1. Write in your own words. Do not copy ChatGPT output as your answer.
 2. All diagrams must be yours. Hand drawn or draw.io, both are fine.
-3. All screenshots must show your own computer, your own username, your own terminal.
+3. Use your own computer for screenshots. You may blur your username and other personal details before sharing them.
 4. Do not paste passwords, tokens, or keys in any screenshot.
 5. Keep Tasks 1 to 6 in order, in one folder, with clear headings.
 
@@ -91,8 +91,8 @@ Steps:
 4. Run a command for your system:
 If you use Windows: whoami, then dir
 If you use Mac or Linux: whoami, then pwd, then ls
-5. Take a screenshot showing VS Code, your theme, your terminal, and your username.
-What to submit: Screenshot 3 - Your VS Code window with theme and terminal output.
+5. Take a screenshot showing VS Code, your theme, and your terminal. Blur your username if you do not want it public.
+What to submit: Screenshot 3 - Your VS Code window with theme and terminal output. Blur your username if you do not want it public.
 
 ## **Task 6 - Publish Your Learning as a LinkedIn Post**
 
@@ -116,7 +116,7 @@ What to submit: Screenshot 4 - Published LinkedIn post plus the LinkedIn URL.
 - Task 4: 50 to 100 word DNS explanation plus correct record
 - Screenshot 3: VS Code with theme, terminal, your username
 - Screenshot 4: LinkedIn post plus URL plus CoraxShift credit note
-- No passwords or keys in any screenshot
+- No passwords, keys, tokens, or personal information you do not want to publish
 - All writing in your own words
 
 ## **Final Submission**

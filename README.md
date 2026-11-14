@@ -2,7 +2,12 @@
 
 > Learn by building. Break it. Fix it. Ship it.
 
-**12 Weeks** | **3 Classes / Week** | **2 Hours / Class** | **1 Real Project** | **12 Badges**
+**12-week roadmap** | **3 classes / week** | **2 hours / class** | **1 learning project** | **12 badges**
+
+> **Course status:** All 12 weeks now have an overview, three class guides, a practical assignment, troubleshooting notes, and a weekly quiz. This repository contains original course materials, not a deployable CoraxReads application.
+
+See the [full curriculum](curriculum.md) for the week-by-week roadmap.
+New learners should also read the [portfolio submission guide](PORTFOLIO-GUIDE.md).
 
 ## **What is CoraxShift?**
 
@@ -21,13 +26,13 @@ No experience needed. We start from zero and explain every command.
 
 ## **What you will build**
 
-**CoraxReads** - a bookstore app you build from Week 1 to Week 12.
+**CoraxReads** - a sample bookstore project used to learn DevOps one step at a time.
 
-- Week 1: You explain how it works, how the internet works, how DNS works
-- Week 2: You deploy it locally with Nginx on Ubuntu
-- Week 3 to Week 8: You script it, version it, automate it, containerize it
-- Week 9: You deploy it to the cloud, with billing alert on day 1
-- Week 10 to Week 12: You orchestrate it, monitor it, and demo it
+- Week 1: Understand how a browser finds and talks to a website
+- Week 2: Serve a simple practice page with Nginx in a Codespace
+- Weeks 3-8: Learn scripting, Git, delivery planning, Terraform, Ansible, and Docker
+- Week 9: Learn the cloud using one AWS account and a billing alert
+- Weeks 10-12: Learn Kubernetes, monitoring, CI/CD, and present the capstone
 
 Your portfolio starts in Week 1. Every week you push.
 
@@ -43,18 +48,38 @@ Your portfolio starts in Week 1. Every week you push.
 
 | Week | Focus | What you ship |
 | --- | --- | --- |
-| 1 | Essentials: Internet, Networking and Tools | Your internet diagram, VS Code setup, CoraxReads explanation |
-| 2 | Linux for DevOps | CoraxReads deployed locally with Nginx, your first shell script |
-| 3 | Bash for DevOps | Automation scripts for CoraxReads |
-| 4 | Git and GitHub | Your portfolio repo, clean history, pull requests |
-| 5 | SDLC | Your CoraxReads workflow, from idea to release |
-| 6 | Terraform | Infrastructure as code for CoraxReads, locally with Docker |
-| 7 | Ansible | Configuration automation for CoraxReads |
-| 8 | Docker | CoraxReads containerized |
-| 9 | Cloud: AWS / Azure / GCP | One cloud account only, CoraxReads deployed, billing alert set |
-| 10 | Kubernetes | CoraxReads orchestrated |
-| 11 | Monitoring + CI/CD | GitHub Actions pipeline, Prometheus + Grafana dashboards |
-| 12 | Capstone Project | Final demo, docs, portfolio review |
+| [1. Essentials](modules/01-essentials/00-overview.md) | Internet, networking, tools | Internet diagram, workstation check, project explanation |
+| [2. Linux](modules/02-linux/00-overview.md) | Linux, Nginx, operations | Local practice page, health-check script, maintenance notes |
+| [3. Bash](modules/03-bash/00-overview.md) | Shell automation | Health check and verified backup scripts |
+| [4. Git](modules/04-git/00-overview.md) | GitHub collaboration | Reviewed pull request and conflict-resolution evidence |
+| [5. SDLC](modules/05-sdlc/00-overview.md) | Plan, test, release | Feature issue, test plan, release and rollback notes |
+| [6. Terraform](modules/06-terraform/00-overview.md) | Infrastructure as code | Local Docker infrastructure, reviewed plan, cleanup proof |
+| [7. Ansible](modules/07-ansible/00-overview.md) | Configuration automation | Repeatable Nginx playbook and idempotency evidence |
+| [8. Docker](modules/08-docker/00-overview.md) | Containers and Compose | App + database stack with persistent data |
+| [9. AWS](modules/09-aws/00-overview.md) | Cloud foundations | Cost guardrails, small approved deployment, teardown |
+| [10. Kubernetes](modules/10-kubernetes/00-overview.md) | Local orchestration | Local cluster, workload, Service, probes, runbook |
+| [11. CI/CD + observability](modules/11-cicd-observability/00-overview.md) | Delivery and operations | CI workflow, dashboard, alert, recovery notes |
+| [12. Capstone](modules/12-capstone/00-overview.md) | Integration and presentation | Demonstrable system, documentation, recovery, reflection |
+
+## **How the project fits together**
+
+We start with a simple page, then add the parts a real application needs. Think of it like a bookstore: the page is the shop window, the backend is the clerk handling requests, and the database is the stock ledger.
+
+```text
+Browser
+   |
+   v
+Web page (HTML, CSS, JavaScript)
+   |
+   v
+Backend (Node.js + Express)
+   |
+   v
+Database (PostgreSQL)
+```
+
+In Week 2, the practice page is served by Nginx on your Codespace. That is a local learning exercise, not the finished cloud architecture.
+The response travels back along the same path to the browser.
 
 ## **Quiz and Badge**
 
@@ -69,15 +94,15 @@ Your portfolio starts in Week 1. Every week you push.
 - A laptop
 - A GitHub account
 - 5 to 7 hours per week
-- Codespaces as your server until Week 9
+- Codespaces as a practice environment until Week 9
 
-No cloud account until Week 9. In Weeks 6 to 7 you practice Terraform and Ansible locally with Docker. In Week 9 you create ONE cloud account, learn the others by comparison, set a billing alert on day 1, and stop the server when you are not using it.
+No cloud account until Week 9. In Weeks 6 to 8, practice Terraform, Ansible, and Docker locally. In Week 9, use one AWS account, set a billing alert before creating resources, and remove resources when you finish. Week 10 uses local Kubernetes. AWS billing alerts are not spending caps, so follow the cleanup checklist and review current pricing.
 
 ## **Example stack for CoraxReads**
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js + Express
-- **Database:** PostgreSQL, MongoDB
+- **Database:** PostgreSQL
 
 ## **What we promise**
 
@@ -88,9 +113,11 @@ We do not promise a job. No academy can promise that. What we promise is that yo
 ## **How to start**
 
 1. Open this repo in Codespaces
-2. Go to `modules/01-essentials/00-overview.md`
+2. Open the [Week 1 overview](modules/01-essentials/00-overview.md)
 3. Start Class 1, do the lab, push your work
 4. Share your Week 1 assignment on LinkedIn with your CoraxReads explanation
+
+The lessons live here. Your own exercises, screenshots, and portfolio work belong in your separate portfolio repository. Never put passwords, API keys, or cloud credentials in either repository.
 
 ## **For students**
 
