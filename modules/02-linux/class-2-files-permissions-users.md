@@ -43,7 +43,7 @@ apt update: Refresh list of software
 apt install: Install software. -y means yes, do not ask again
 nginx -v: Shows Nginx version
 
-Expected output: The Nginx version is shown. Your version may be different. That is okay. We install only what this week's lab needs; Node.js comes later in the course. Do not run apt upgrade -y in Codespace unless you need it, it takes long.
+Expected output: The Nginx version is shown. Your version may be different. That is okay. Assignment 2A also uses Node.js; check the required version in the [Getting Started guide](../../GETTING-STARTED.md) before that assignment. Do not run apt upgrade -y in Codespace unless you need it, it takes long.
 
 ## **Step 3: File and Directory Permissions**
 

@@ -96,12 +96,12 @@ D. Empty error log means server is permanently perfect
 Answers: A, B, C. Explanation: A is true, access log shows requests. B is true, error log shows errors. C is true, journalctl shows service logs. D is false, empty means no errors in that time period, not forever perfect.
 
 Q12 - Choose ALL that apply
-You are serving a static HTML page from /var/www/html. Which are good permission practices?
-A. Let the web server read the page without owning or changing it
-B. Use 755 for the directory and 644 for the HTML file
-C. Use chmod 777 so nobody gets blocked
-D. Verify the permissions with ls -l
-Answers: A, B, D. Explanation: A is true because a static web server needs to read the page, not edit it. B is true because the directory needs execute (enter) permission and the HTML file needs read permission. C is false because 777 allows everyone to change files. D is true because checking confirms what permissions are actually set.
+Which statements describe a safe React-to-Nginx deployment?
+A. npm run build creates production files in dist/
+B. Copy the build into its own Nginx subfolder so other web-root files stay in place
+C. Nginx needs permission to read the static files
+D. chmod 777 is the safest way to avoid permission problems
+Answers: A, B, C. Explanation: A is true because Vite builds browser-ready files in dist/. B is true because a dedicated subfolder avoids replacing other content. C is true because Nginx serves the files by reading them. D is false because 777 gives every user write access.
 
 ## **Scoring**
 

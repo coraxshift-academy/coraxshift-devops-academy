@@ -73,11 +73,12 @@ Run commands in the environment named by the lesson:
 | Week | Tool and course version target | Install/use it when | Verify |
 | --- | --- | --- | --- |
 | 1 | Git 2.40 or newer; current stable VS Code if using desktop | Week 1, local path only. Codespaces already provides Git and a browser editor. | `git --version`; `code --version` |
-| 2–3 | Ubuntu 24.04 LTS; Bash 5.x; Nginx from the Ubuntu package repository | Use the Linux lab environment. Install Nginx inside that disposable lab, not on Windows itself. | `cat /etc/os-release`; `bash --version`; `nginx -v` |
+| 2 | Ubuntu 24.04 LTS; Bash 5.x; Nginx from the Ubuntu package repository; Node.js 22.12 or newer and npm | Week 2 uses Nginx in the Linux lab and Node.js/npm to build the React starter in Assignment 2A. Codespaces usually provides Node.js; verify it before the assignment. | `cat /etc/os-release`; `bash --version`; `node --version`; `npm --version`; `nginx -v` |
+| 3 | Ubuntu 24.04 LTS; Bash 5.x; Nginx from the Ubuntu package repository | Continue in the Linux lab. Install Nginx inside that disposable lab, not on Windows itself. | `cat /etc/os-release`; `bash --version`; `nginx -v` |
 | 4–5 | Git from Week 1; no new software required | Continue in the same portfolio repository. | `git --version` |
 | 6 | Terraform 1.17.x; Docker Engine with Compose; Docker provider `kreuzwerker/docker` 3.x | Before the local Terraform lab. The official Terraform installer showed 1.17.2 when this guide was reviewed; confirm the latest patch and record `terraform version`. | `terraform version`; `docker version`; `docker compose version` |
 | 7 | Current supported Ansible release on a Linux control node; Python 3 on Linux control/managed nodes | Before the Ansible lab. Windows is not a native Ansible control node; use Ubuntu, WSL2, or a suitable Linux Codespace. Ubuntu 24.04 supplies Python 3 for the lab. | `ansible --version`; `python3 --version` |
-| 8 | Node.js 22.x and its bundled npm; PostgreSQL 16.x container image | Before running the CoraxReads app/tests. The repository requires Node `>=22`, CI tests Node 22, and the Dockerfile uses `node:22-alpine`. PostgreSQL runs in Compose; do not install a separate database server. | `node --version`; `npm --version`; `docker compose version` |
+| 8 | Node.js 22.x and its bundled npm; PostgreSQL 16.x container image | Reuse the Node.js setup for the CoraxReads backend/tests. The repository requires Node `>=22`, CI tests Node 22, and the Dockerfile uses `node:22-alpine`. PostgreSQL runs in Compose; do not install a separate database server. | `node --version`; `npm --version`; `docker compose version` |
 | 9 | AWS Console in a browser; no AWS CLI required by this course assignment | Week 9 only, after instructor approval of the budget and cleanup plan. Do not create an account or resources early for practice. | Confirm account, region, MFA, and budget in the lesson checklist. |
 | 10 | Docker; kind v0.33.x; `kubectl` within one Kubernetes minor version of the local cluster | Before the local Kubernetes lab. Match the `kubectl` client to the Kubernetes version used by kind; follow kind's supported node-image instructions. Do not create a paid cluster. | `kind version`; `kubectl version --client`; `kubectl get nodes` |
 | 11–12 | Reuse the app, Docker, GitHub Actions, and local monitoring examples | The course uses GitHub-hosted CI and local container-based monitoring; do not install a cloud monitoring service for these lessons. | `npm test`; `docker compose ps`; inspect the workflow run |
@@ -88,7 +89,7 @@ Exact patch releases change. The targets above identify the tested or compatible
 
 - **Python:** Learners do not need to install Python for the current 12-week app exercises. Ansible uses Python on Linux nodes, which is provided by the Ubuntu lab. The repository's documentation-check script is for maintainers/CI, not a student assignment.
 - **Chocolatey:** Optional Windows package manager only. WinGet or the official installers are sufficient for the optional Week 1 local setup.
-- **Node.js:** Wait until Week 8 unless an instructor explicitly asks you to run the app earlier.
+- **Node.js:** Verify Node.js 22.12 or newer before Week 2 Assignment 2A, then reuse it in Week 8. The React starter uses npm and does not need a separate system-wide React installation.
 - **Docker and Terraform:** Wait until Week 6. Docker is also used in Weeks 8 and 10.
 - **Ansible:** Wait until Week 7 and use a Linux control node.
 - **AWS:** Do not create an AWS account or resources before Week 9 and instructor approval.

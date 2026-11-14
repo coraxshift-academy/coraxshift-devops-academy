@@ -31,7 +31,7 @@ No experience needed. We start from zero and explain every command.
 **CoraxReads** - a sample bookstore project used to learn DevOps one step at a time.
 
 - Week 1: Understand how a browser finds and talks to a website
-- Week 2: Serve a simple practice page with Nginx in a Codespace
+- Week 2: Build and serve CoraxReads with React and Nginx, run a maintenance drill, and deploy a static portfolio page in a Codespace
 - Weeks 3-8: Learn scripting, Git, delivery planning, Terraform, Ansible, and Docker
 - Week 9: Learn the cloud using one AWS account and a billing alert
 - Weeks 10-12: Learn Kubernetes, monitoring, CI/CD, and present the capstone
@@ -51,7 +51,7 @@ Your portfolio starts in Week 1. Every week you push.
 | Week | Focus | What you ship |
 | --- | --- | --- |
 | [1. Essentials](modules/01-essentials/00-overview.md) | Internet, networking, tools | Internet diagram, workstation check, project explanation |
-| [2. Linux](modules/02-linux/00-overview.md) | Linux, Nginx, operations | Local practice page, health-check script, maintenance notes |
+| [2. Linux](modules/02-linux/00-overview.md) | Linux, React, Nginx, operations | React deployment, operations/recovery report, static portfolio page |
 | [3. Bash](modules/03-bash/00-overview.md) | Shell automation | Health check and verified backup scripts |
 | [4. Git](modules/04-git/00-overview.md) | GitHub collaboration | Reviewed pull request and conflict-resolution evidence |
 | [5. SDLC](modules/05-sdlc/00-overview.md) | Plan, test, release | Feature issue, test plan, release and rollback notes |
@@ -80,7 +80,7 @@ Backend (Node.js + Express)
 Database (PostgreSQL)
 ```
 
-In Week 2, the practice page is served by Nginx on your Codespace. That is a local learning exercise, not the finished cloud architecture.
+In Week 2, the React practice app and a separate static page are served by Nginx on your Codespace. That is a local learning exercise, not the finished cloud architecture.
 The response travels back along the same path to the browser.
 
 ## **Quiz and Badge**
@@ -95,14 +95,14 @@ The response travels back along the same path to the browser.
 
 - A browser and access to this private course repo
 - A GitHub account with Codespaces access, or a local editor/Git setup
-- 5 to 7 hours per week
+- 5 to 7 hours most weeks; plan for about 9.5 hours in Week 2 because it has three required assignments
 - Follow the [Getting Started setup guide](GETTING-STARTED.md); install tools only when their week needs them
 
 No cloud account until Week 9. In Weeks 6 to 8, practice Terraform, Ansible, and Docker locally. In Week 9, use one AWS account, set a billing alert before creating resources, and remove resources when you finish. Week 10 uses local Kubernetes. AWS billing alerts are not spending caps, so follow the cleanup checklist and review current pricing.
 
 ## **Example stack for CoraxReads**
 
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** React, HTML, CSS, JavaScript
 - **Backend:** Node.js + Express
 - **Database:** PostgreSQL
 

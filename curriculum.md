@@ -29,8 +29,8 @@ Push: Your diagram + tool check list + project idea doc for CoraxReads.
 ## **Week 2: Linux for DevOps**
 
 Learn: Files, permissions, users, processes, logs, basic networking commands. How to read a log and find the problem.
-Build: Serve a simple CoraxReads practice page with Nginx in a Codespace. Manage it with commands, check logs, and learn safe file permissions.
-Push: Screenshots of your commands + a short log troubleshooting note.
+Build: Complete three required Codespaces assignments: deploy the CoraxReads React build with Nginx, perform a manual operations and recovery drill, and serve a separate static portfolio page.
+Push: Three short reports with sanitized evidence in your own portfolio repo. This is a heavier week: plan for about 9.5 hours, including classes.
 
 ## **Week 3: Bash for DevOps**
 
