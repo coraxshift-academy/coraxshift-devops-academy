@@ -1,2 +1,27 @@
 fix_*.py
 setup_*.py
+
+# Local environment files; keep the example template shareable.
+.env
+.env.*
+!.env.example
+
+# Terraform-generated state and cache can contain sensitive values.
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+
+# Dependencies and local Python artifacts.
+node_modules/
+__pycache__/
+*.py[cod]
+
+# Private keys and local OS files.
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.DS_Store

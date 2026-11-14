@@ -42,20 +42,20 @@ Type:
 ip a
 ip route
 ping -c 4 google.com
-sudo ss -tuln
+sudo ss -tulpn
 curl -I http://localhost
 
 What it does:
 ip a: Shows network interfaces and IPs
 ip route: Shows default gateway
 ping -c 4: Send 4 test messages. -c means count
-ss -tuln: Shows listening ports. t means TCP, u means UDP, l means listening, n means numbers
+ss -tulpn: Shows listening ports and process names. t means TCP, u means UDP, l means listening, p means process, n means numbers
 curl -I: Shows headers only, to check if site works
 
 Expected output:
 ip a shows your interfaces
 ping shows 4 replies, 0 percent loss
-ss shows port 80 listening
+ss shows Nginx listening on port 80
 curl shows HTTP/1.1 200 OK
 
 If curl shows 200 OK, Nginx is working.
@@ -109,15 +109,16 @@ Expected output: You see Checking..., uptime, memory, disk, and HTTP 200 OK.
 Type:
 sudo apt install -y nginx
 sudo service nginx start
-echo '<h1>CoraxReads</h1><h2>Deployed by: Your Full Name</h2><p>Date: DD-MM-YYYY</p>' | sudo tee /var/www/html/index.html
-sudo chown -R www-data:www-data /var/www/html
-sudo chmod -R 755 /var/www/html
+echo '<h1>CoraxReads</h1><h2>Made by: Your Display Name</h2><p>Date: DD-MM-YYYY</p>' | sudo tee /var/www/html/index.html
+sudo chmod 755 /var/www/html
+sudo chmod 644 /var/www/html/index.html
 sudo nginx -t
 sudo service nginx restart
 curl http://localhost
 
 What it does:
 tee: Write to a file that needs sudo
+chmod 755 on the directory lets Nginx read files in it; chmod 644 on the page lets Nginx read the page without making it executable.
 nginx -t: Test Nginx config. Should say syntax is ok, test is successful
 service nginx restart: Restart Nginx
 curl: Fetch your site
@@ -127,7 +128,7 @@ nginx: syntax is ok
 nginx: test is successful
 Your CoraxReads HTML with your name
 
-To see it in browser: In Codespace, click Ports tab at bottom, Forward a Port, type 80, click globe icon.
+To see it in a browser: Open the Ports tab, forward port 80, and open the forwarded address. Keep its visibility Private for this exercise. Do not treat the forwarded address as a public IP or as a replacement for a cloud firewall.
 
 ## **Push**
 

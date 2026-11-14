@@ -4,16 +4,9 @@
 
 Time: 2 hours
 
-<<<<<<< HEAD
-## Where to run commands
-We run commands in a terminal. 
-It is a window where you type words and the computer answers. 
-You do not run them in your browser.
-=======
 ## **Where to run commands**
 
-We run commands in a terminal. It is a window where you type words and the computer answers. You do not run them in your browser.
->>>>>>> 269a287 (Fix Week 1 and Week 2 - bold headings, separate lines, clean order)
+We run commands in a terminal: a window where you type instructions and the computer answers. You do not run these commands in your browser.
 
 If you use Windows:
 1. Press Windows key
@@ -33,57 +26,27 @@ You will see yourname@laptop:~$
 
 That line is called a prompt. It means the computer is waiting for you to type.
 
-<<<<<<< HEAD
-## Definitions for this class
-**Terminal:** The app where you type commands.
-
-**Command:** A typed instruction. Example: ping google.com
-**
-Internet:** A network that connects computers around the world.
-
-**IP Address:** The number address of a computer. Example: 8.8.8.8
-
-**DNS:** The phonebook of the internet. It turns a name like google.com into an IP.
-
-**Server:** A computer that waits to answer requests.
-
-**Ping:** A command that sends a small test message and waits for a reply.
-
-**Nslookup:** A command that asks your DNS server: What is the IP for this name?
-
-**Domain:** A name you buy, like coraxshift.com.
-
-## Step 1: Check internet with an IP
-You are in your terminal. 
-=======
 ## **Definitions for this class**
 
-Terminal: The app where you type commands.
-Command: A typed instruction. Example: ping google.com
-Internet: A network that connects computers around the world.
-IP Address: The number address of a computer. Example: 8.8.8.8
-DNS: The phonebook of the internet. It turns a name like google.com into an IP.
-Server: A computer that waits to answer requests.
-Ping: A command that sends a small test message and waits for a reply.
-Nslookup: A command that asks your DNS server: What is the IP for this name?
-Domain: A name you buy, like coraxreads.com.
+- **Terminal:** The app where you type commands.
+- **Command:** A typed instruction, such as `ping google.com`.
+- **Internet:** Networks that let computers communicate.
+- **IP address:** A numeric address used to find a device on a network.
+- **DNS:** Like a contacts list: it helps find the IP address for a name such as `google.com`.
+- **Server:** A computer or program that waits for and answers requests.
+- **Ping:** A basic test that sends a message and waits for a reply.
+- **Nslookup:** A command that asks DNS for information about a name.
+- **Domain:** A readable name, such as `coraxreads.com`.
 
 ## **Step 1: Check internet with an IP**
 
-You are in your terminal. Type this and press Enter:
+In your terminal, type this and press Enter:
+
+```text
 ping 8.8.8.8
->>>>>>> 269a287 (Fix Week 1 and Week 2 - bold headings, separate lines, clean order)
+```
 
-Type this 'ping 8.8.8.8' 
-
-and press Enter
-
-
-
-**What it does:** 
-
-Sends a test message to 8.8.8.8, which is Google DNS. 
-We use an IP, not a name, so we test internet only, not DNS.
+**What it does:** Sends a small ICMP test message to the IP address `8.8.8.8`. Because this command uses an IP address directly, it does not need to look up a domain name first. A reply tests one network path; it does not prove that every internet service works.
 
 **Expected output on Windows:**
 
@@ -95,23 +58,17 @@ On Windows it stops by itself after 4 replies.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=25.123 ms
 On Mac or Linux it keeps going. Press Ctrl + C to stop it.
 
-**What it means:**
+**What it means:** A reply means that this destination responded to the network test. Your time and address may differ. If there is no reply, ICMP may be blocked; use the other checks before deciding the internet is down.
 
-You got a reply. Internet works. Your time number will be different. That is okay.
+If you see `Request timed out` or `Network is unreachable`, it does not automatically mean Wi-Fi is off. A network may block ping messages. Check your connection, then try the DNS and browser checks below.
 
-If you see Request timed out or Network is unreachable, your WiFi is off. Check WiFi, run again.
-
-<<<<<<< HEAD
-## Step 2: Check names with DNS
-=======
 ## **Step 2: Check names with DNS**
 
 You are still in your terminal. Type:
-ping google.com
->>>>>>> 269a287 (Fix Week 1 and Week 2 - bold headings, separate lines, clean order)
 
-You are still in your terminal. 
-Type: ping google.com
+```text
+ping google.com
+```
 
 **What it does:** 
 
@@ -133,19 +90,15 @@ Press Ctrl + C to stop it.
 DNS worked. It turned the name into 142.250.80.46. 
 Your IP will be different. That is okay. Google has many IPs.
 
-If you see could not find host or could not resolve host, DNS is broken, even if Step 1 worked. That is the key lesson.
+If you see `could not find host` or `could not resolve host`, the name lookup failed. If the name resolves but ping times out, the network may block ping replies; try opening a website in the browser or ask your instructor.
 
-<<<<<<< HEAD
-## Step 3: See DNS working with nslookup
-=======
 ## **Step 3: See DNS working with nslookup**
 
 You are still in your terminal. Type:
-nslookup google.com
->>>>>>> 269a287 (Fix Week 1 and Week 2 - bold headings, separate lines, clean order)
 
-You are still in your terminal. 
-Type: nslookup google.com
+```text
+nslookup google.com
+```
 
 **What it does:** Asks your DNS server directly for the IP.
 
@@ -156,7 +109,7 @@ Non-authoritative answer:
 Name: google.com
 Addresses: 142.250.80.46
 
-**What it means:** Your DNS server is at 192.168.1.1. Yours will be different. The answer shows IPs for google.com.
+**What it means:** `Server` is the DNS resolver that answered. Yours will be different. The answer shows IPs for `google.com`. Addresses can change and a domain can have several.
 
 ## **Draw it**
 

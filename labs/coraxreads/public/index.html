@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CoraxReads Bookshop</title>
+    <style>
+      body { font: 1rem/1.5 system-ui, sans-serif; margin: 2rem auto; max-width: 48rem; padding: 0 1rem; }
+      li { margin-block: 0.75rem; }
+      .muted { color: #555; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CoraxReads</h1>
+      <p class="muted">A small bookstore for learning DevOps.</p>
+    </header>
+    <main>
+      <h2>Book catalog</h2>
+      <p id="status" role="status">Loading books...</p>
+      <ul id="books"></ul>
+    </main>
+    <script>
+      async function loadBooks() {
+        const status = document.querySelector("#status");
+        const list = document.querySelector("#books");
+        try {
+          const response = await fetch("/api/books");
+          if (!response.ok) throw new Error("Catalog request failed");
+          const books = await response.json();
+          list.replaceChildren();
+          for (const book of books) {
+            const item = document.createElement("li");
+            const title = document.createElement("strong");
+            title.textContent = book.title;
+            item.append(title, ` by ${book.author} - $${(book.price_cents / 100).toFixed(2)}`);
+            list.append(item);
+          }
+          status.textContent = books.length ? "" : "No books are available yet.";
+        } catch {
+          status.textContent = "The catalog is temporarily unavailable. Please try again.";
+        }
+      }
+
+      loadBooks();
+    </script>
+  </body>
+</html>

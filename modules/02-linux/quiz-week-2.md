@@ -56,8 +56,8 @@ D. ip a
 Answer: A. Explanation: Correct is A because ps lists processes. B is wrong because ls lists files. C is wrong because pwd shows folder. D is wrong because ip a shows network.
 
 Q7 - Choose ONE
-Which command shows listening ports?
-A. ss -tuln
+Which command shows listening ports and process names?
+A. ss -tulpn
 B. ls -la
 C. free -h
 D. df -h
@@ -83,9 +83,9 @@ Q10 - Choose ALL that apply
 Which are true about Nginx config test?
 A. sudo nginx -t tests syntax
 B. If it says syntax is ok, config is valid
-C. If you remove ; from try_files, nginx -t fails
+C. If you remove the semicolon from listen in the temporary lab config, nginx -t fails
 D. You should restart Nginx without testing in production
-Answers: A, B, C. Explanation: A is true, -t tests. B is true, ok means valid. C is true, missing ; is syntax error. D is false, you must test before restart in production.
+Answers: A, B, C. Explanation: A is true, -t tests. B is true, ok means the config passed this syntax test. C is true, a missing semicolon is a syntax error. D is false, test before applying a change.
 
 Q11 - Choose ALL that apply
 Which are true about logs?
@@ -96,12 +96,12 @@ D. Empty error log means server is permanently perfect
 Answers: A, B, C. Explanation: A is true, access log shows requests. B is true, error log shows errors. C is true, journalctl shows service logs. D is false, empty means no errors in that time period, not forever perfect.
 
 Q12 - Choose ALL that apply
-Which are true about permissions for /var/www/html?
-A. chown -R www-data:www-data sets owner to Nginx user
-B. chmod -R 755 gives owner rwx, group and others r-x
-C. chmod 777 is safe for production
-D. You should verify with ls -l after changing
-Answers: A, B, D. Explanation: A is true, www-data is Nginx user. B is true, 755 is safe for web root. C is false, 777 lets everyone write, unsafe. D is true, always verify.
+You are serving a static HTML page from /var/www/html. Which are good permission practices?
+A. Let the web server read the page without owning or changing it
+B. Use 755 for the directory and 644 for the HTML file
+C. Use chmod 777 so nobody gets blocked
+D. Verify the permissions with ls -l
+Answers: A, B, D. Explanation: A is true because a static web server needs to read the page, not edit it. B is true because the directory needs execute (enter) permission and the HTML file needs read permission. C is false because 777 allows everyone to change files. D is true because checking confirms what permissions are actually set.
 
 ## **Scoring**
 

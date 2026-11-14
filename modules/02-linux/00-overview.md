@@ -3,14 +3,18 @@
 # **Week 2: Linux for DevOps - Local, No Cloud Yet**
 
 Time: 3 classes, 2 hours each. Quiz at end of Week 2.
-Rule: No AWS, no EC2, no cloud. We use Codespaces as our server until Week 9.
+Rule: No AWS, no EC2, and no cloud account this week. Codespaces is our temporary practice environment, not a production server.
 
-## **Decision: Codespaces replaces AWS for Week 2**
+## **Codespaces is a lab, not a cloud VM**
 
-- EC2 instance = Your Codespace
-- Public IP = Ports tab in Codespace, GitHub gives you a link
-- Security Group = You do not need it. Just forward port 80 in Ports tab
-- curl ifconfig.me = You use curl http://localhost inside Codespace
+- A Codespace is a managed development environment; it is not the same as an EC2 virtual machine.
+- Forwarding port 80 gives you a route to the app. It does not give the Codespace a public IP address or create a cloud security group.
+- Keep forwarded ports **Private** for this lab. Make a port public only with instructor approval and only when you understand who can access it.
+- `curl http://localhost` checks the web server from inside the Codespace. It is not the same as asking an external service for your public IP.
+
+```text
+Your browser -- private forwarded port --> Codespace port 80 -> Nginx -> index.html
+```
 
 ## **How Week 2 works**
 
@@ -20,13 +24,12 @@ Class 3: Processes + Networking + System Info + Shell Scripting + Project Finali
 
 ## **Where to run commands**
 
-In Codespace, you are already in Ubuntu. Your terminal at the bottom is Linux.
-In Codespace, use service, not systemctl. Codespace container does not use systemctl.
+In Codespaces, the provided terminal is Linux. This lab uses `service` to manage Nginx in its container:
 - Start Nginx: sudo service nginx start
 - Check Nginx: sudo service nginx status
 - Test Nginx config: sudo nginx -t
 
-In a full VM like WSL or Multipass, you can use systemctl. We show both, so no one is confused.
+Some Linux virtual machines use `systemctl` instead. Use the command taught for the environment you are in. If the command is unavailable, stop and ask for help rather than guessing.
 
 ## **Definitions for Week 2**
 
@@ -52,6 +55,21 @@ Web Root: The folder Nginx serves. On Ubuntu it is /var/www/html
 
 - You can navigate, create, copy, move, delete files with Linux commands
 - You can explain permissions with rwx in plain words
-- You can deploy a site locally with Nginx and open it in your browser via Ports tab
+- You can serve a practice page with Nginx and open it through a privately forwarded Codespaces port
 - You can check logs, check disk, check memory, and recover Nginx after a break
 - Your assignment folder is on GitHub
+
+## Lessons
+
+- [Class 1: Linux, setup, and navigation](class-1-linux-intro-vm-setup-system.md)
+- [Class 2: Editors, packages, permissions, and users](class-2-files-permissions-users.md)
+- [Class 3: Processes, networking, and scripts](class-3-processes-networking-shell-scripting-project.md)
+- [Assignment 2](assignment-2.md)
+- [Troubleshooting](troubleshooting.md)
+- [Quiz Week 2](quiz-week-2.md)
+- [Role plays: explain Nginx](role-play-2.md) and [maintenance drill](role-play-3.md)
+
+## Official reference
+
+- [Ubuntu server documentation](https://ubuntu.com/server/docs)
+- [Nginx beginner's guide](https://nginx.org/en/docs/beginners_guide.html)

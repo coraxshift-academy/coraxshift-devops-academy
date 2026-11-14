@@ -10,37 +10,16 @@ You will run commands in two places today:
 1. In your normal terminal, like in Class 1
 2. Inside VS Code, in its integrated terminal. That is a terminal inside VS Code.
 
-<<<<<<< HEAD
-## Definitions for this class
-**Frontend:** What the user sees. Example: HTML page.
-
-**Backend:** What does the work. Example: Node.js code that answers requests.
-
-**Database:** Where data is stored. Example: PostgreSQL.
-
-**Architecture:** How the parts are arranged and how they talk.
-
-**VS Code:** The editor where we write code.
-
-**Integrated Terminal:** A terminal inside VS Code. Shortcut: Ctrl + ` on Windows, Mac, Linux.
-
-**Prompt:** A typed instruction to AI. A good prompt has context.
-
-**Troubleshooting:** Finding what broke, fixing it, and writing it down.
-=======
 ## **Definitions for this class**
 
 - **Frontend:** What the user sees. Example: HTML page.
-
-- **Backend:** What does the work. Example: Node.js code that answers requests.
-
+- **Backend:** The part that checks requests and does the work. Example: Node.js code that handles an order.
 - **Database:** Where data is stored. Example: PostgreSQL.
-Architecture: How the parts are arranged and how they talk.
-VS Code: The editor where we write code.
-Integrated Terminal: A terminal inside VS Code. Shortcut: Ctrl + ` on Windows, Mac, Linux.
-Prompt: A typed instruction to AI. A good prompt has context.
-Troubleshooting: Finding what broke, fixing it, and writing it down.
->>>>>>> 269a287 (Fix Week 1 and Week 2 - bold headings, separate lines, clean order)
+- **Architecture:** How the parts are arranged and how they talk.
+- **VS Code:** The editor where we write code.
+- **Integrated terminal:** A terminal inside VS Code. Shortcut: Ctrl + ` on Windows, Mac, Linux.
+- **Prompt:** A typed instruction to AI. A good prompt includes context.
+- **Troubleshooting:** Finding what broke, fixing it, and writing it down.
 
 ## **Part 1: App Architecture and Stack**
 
@@ -55,18 +34,15 @@ Backend sends the answer back to Frontend.
 
 Two-tier: Frontend + Database. Frontend talks straight to Database. Simple, but hard to grow.
 
-Three-tier: Frontend + Backend + Database. Frontend talks to Backend, Backend talks to Database. Easier to grow and secure. This is what we use in CoraxShift.
+Three-tier: Frontend + Backend + Database. Frontend talks to Backend, Backend talks to Database. This separation can make an app easier to grow and secure. It is the target architecture for CoraxReads.
+
+Picture a bookstore: the webpage is the shop window, the backend is the clerk who checks an order, and the database is the stock ledger. The browser should talk to the backend; it should not connect straight to the database.
+
+```text
+Browser -> Frontend (shop window) -> Backend (clerk) -> Database (stock ledger)
+```
 
 Example stack for CoraxReads:
-<<<<<<< HEAD
-
-**Frontend:** HTML, CSS, JavaScript
-
-**Backend:** Node.js + Express
-
-**Database:** PostgreSQL
-=======
->>>>>>> 269a287 (Fix Week 1 and Week 2 - bold headings, separate lines, clean order)
 
 - **Frontend:** HTML, CSS, JavaScript
 
