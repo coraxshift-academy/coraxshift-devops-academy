@@ -5,6 +5,8 @@
 
 ## Task 1 - Create and check the cluster
 
+Before starting, read the [Getting Started tool/version guide](../../GETTING-STARTED.md#install-tools-when-their-week-arrives). Verify Docker is running, install kind and `kubectl` for your OS, and keep the client within one Kubernetes minor version of the kind cluster.
+
 Start Docker, create a `kind` cluster named `coraxreads`, then run `kubectl get nodes`. Save the output and explain what Ready means.
 
 ## Task 2 - Create desired-state files

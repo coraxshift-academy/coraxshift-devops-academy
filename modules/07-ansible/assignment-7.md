@@ -3,6 +3,8 @@
 **Time:** 2-3 hours
 **Target:** An Ubuntu VM or a disposable Ubuntu Codespace where you have admin permission.
 
+Read the [Getting Started tool/version guide](../../GETTING-STARTED.md#install-tools-when-their-week-arrives) first. Ansible runs from a Linux control node; Windows users should use Ubuntu/WSL2 or the instructor-provided Linux lab, not native PowerShell. Check `ansible --version` and `python3 --version` before starting.
+
 ## Task 1 - Prepare the target
 
 Run `whoami`, `cat /etc/os-release`, `ansible --version`, and `sudo service nginx status`. Confirm the OS, Ansible version, and target. If you are not sure which machine a command will affect, stop.

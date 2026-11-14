@@ -7,7 +7,7 @@ Time: 3 classes, 2 hours each. Quiz at end of Week 1.
 ## **Welcome to CoraxShift**
 
 We build, we break, we fix, we ship. One project from Week 1 to Week 12.
-Your portfolio starts in Week 1. Every week you push to your own public portfolio repo.
+Your portfolio starts in Week 1. Push your work to a portfolio repo you control; keep it private if course access or personal details should not be public.
 
 ## **How to get most of CoraxShift**
 
@@ -18,6 +18,8 @@ Your portfolio starts in Week 1. Every week you push to your own public portfoli
 5. If it breaks, write what broke. That is learning.
 
 ## **Week 1 map**
+
+Before Class 1, read the [Getting Started environment and software guide](../../GETTING-STARTED.md). You need only a browser and course access to begin; local VS Code/Git are optional, and later-week tools are installed when needed.
 
 Class 1: Welcome + Internet + Domain and DNS
 Class 2: App Architecture + VS Code + AI + Troubleshooting

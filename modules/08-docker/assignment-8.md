@@ -5,6 +5,8 @@
 
 ## Task 1 - Prepare the app
 
+Use Node.js 22.x (the course-tested baseline) and Docker with the Compose plugin. Check `node --version`, `npm --version`, `docker version`, and `docker compose version`. If a required tool is missing, use the [Getting Started tool/version guide](../../GETTING-STARTED.md#install-tools-when-their-week-arrives); do not install PostgreSQL on the host because Compose runs the database container.
+
 Use the course starter in `labs/coraxreads/` as your reference. Copy it into your portfolio repository or fork the course repository for the lab. Read `labs/coraxreads/README.md`. Run `npm ci` and `npm test`; confirm the health endpoint and catalog behavior in the source. Keep `.env` local and untracked.
 
 ## Task 2 - Write the Dockerfile

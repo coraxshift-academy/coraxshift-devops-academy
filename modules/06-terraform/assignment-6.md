@@ -5,6 +5,8 @@
 
 ## Task 1 - Prepare safely
 
+Read the [Getting Started tool/version guide](../../GETTING-STARTED.md#install-tools-when-their-week-arrives) and use only a disposable local lab. If Docker or Terraform is missing, install it using the linked official instructions before continuing; do not switch to a cloud provider.
+
 1. Confirm Docker works with `docker version`.
 2. Confirm Terraform is installed with `terraform version`.
 3. Create a clean folder and put the Class 1 configuration in `main.tf`.

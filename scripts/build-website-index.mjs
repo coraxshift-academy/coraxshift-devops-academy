@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const websiteDirectory = path.join(root, "website");
 const outputPath = path.join(websiteDirectory, "search-index.json");
-const includeTopLevel = ["README.md", "curriculum.md", "PORTFOLIO-GUIDE.md", "CLOUD-ARCHITECTURES.md", "OPEN-SOURCE-PROJECTS.md"];
+const includeTopLevel = ["README.md", "curriculum.md", "GETTING-STARTED.md", "PORTFOLIO-GUIDE.md", "CLOUD-ARCHITECTURES.md", "OPEN-SOURCE-PROJECTS.md"];
 
 async function markdownFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });

@@ -8,6 +8,7 @@
 
 See the [full curriculum](curriculum.md) for the week-by-week roadmap.
 New learners should also read the [portfolio submission guide](PORTFOLIO-GUIDE.md).
+Start with the [Getting Started setup guide](GETTING-STARTED.md) for the recommended environment, OS-specific commands, and when each tool is needed.
 Preview the [CoraxShift learning portal](website/README.md), browse the [curated open-source project references](OPEN-SOURCE-PROJECTS.md), and compare the [AWS, Azure, and Google Cloud architecture diagrams](CLOUD-ARCHITECTURES.md).
 
 ## **What is CoraxShift?**
@@ -40,7 +41,7 @@ Your portfolio starts in Week 1. Every week you push.
 ## **How it works**
 
 - **3 classes per week, 2 hours each**
-- **Every class:** Where to run commands, what each command does, expected output, what you should see after
+- **Class guides:** Where to run the lab, plain-language command walkthroughs, and expected checks where relevant
 - **Every week:** Hands-on project, push to portfolio, pass checklist
 - **Every week:** Quiz at end of Class 3, 12 questions, 20 minutes
 - **Every week:** 90 percent earns the weekly badge
@@ -92,10 +93,10 @@ The response travels back along the same path to the browser.
 
 ## **What you need**
 
-- A laptop
-- A GitHub account
+- A browser and access to this private course repo
+- A GitHub account with Codespaces access, or a local editor/Git setup
 - 5 to 7 hours per week
-- Codespaces as a practice environment until Week 9
+- Follow the [Getting Started setup guide](GETTING-STARTED.md); install tools only when their week needs them
 
 No cloud account until Week 9. In Weeks 6 to 8, practice Terraform, Ansible, and Docker locally. In Week 9, use one AWS account, set a billing alert before creating resources, and remove resources when you finish. Week 10 uses local Kubernetes. AWS billing alerts are not spending caps, so follow the cleanup checklist and review current pricing.
 
