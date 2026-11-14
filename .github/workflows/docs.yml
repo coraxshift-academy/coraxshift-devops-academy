@@ -15,3 +15,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Check Markdown links, merge markers, and quiz structure
         run: python3 scripts/check_docs.py
+      - name: Validate learning portal search index and quizzes
+        run: |
+          node scripts/build-website-index.mjs --check
+          node --test scripts/test-website.mjs

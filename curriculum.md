@@ -7,6 +7,8 @@ Project: CoraxReads, a sample bookstore app used throughout the course. You lear
 This is the complete course roadmap. Every week has an overview, three class guides, a practical assignment, troubleshooting notes, and a weekly quiz. Later-week activities are educational labs; they are not production infrastructure.
 
 Start with the [Week 1 overview](modules/01-essentials/00-overview.md) or [Week 2 overview](modules/02-linux/00-overview.md), then follow the weekly links in the [README](README.md).
+Use the [local learning portal](website/README.md) to search lesson topics and take interactive quizzes. The quiz answers and explanations are read from the same weekly Markdown files used in the course.
+Optional project references for each week are listed in the [open-source project guide](OPEN-SOURCE-PROJECTS.md); compare the [AWS, Azure, and Google Cloud diagrams](CLOUD-ARCHITECTURES.md) without creating extra cloud accounts.
 
 ## **The project in one picture**
 

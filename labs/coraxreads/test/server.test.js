@@ -40,3 +40,15 @@ test("book endpoint returns catalog rows", async (t) => {
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), books);
 });
+
+test("home page serves the searchable CoraxReads storefront", async (t) => {
+  const baseUrl = await startTestServer({ query: async () => ({ rows: [] }) }, t);
+
+  const response = await fetch(baseUrl);
+  const html = await response.text();
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("content-type"), /text\/html/);
+  assert.match(html, /Find your next/);
+  assert.match(html, /id="book-search"/);
+  assert.match(html, /id="books"/);
+});

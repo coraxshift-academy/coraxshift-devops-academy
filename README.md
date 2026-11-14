@@ -4,10 +4,11 @@
 
 **12-week roadmap** | **3 classes / week** | **2 hours / class** | **1 learning project** | **12 badges**
 
-> **Course status:** All 12 weeks now have an overview, three class guides, a practical assignment, troubleshooting notes, and a weekly quiz. This repository contains original course materials, not a deployable CoraxReads application.
+> **Course status:** All 12 weeks have an overview, three class guides, a practical assignment, troubleshooting notes, and a weekly quiz. A local-first learning portal and CoraxReads teaching app make it easier to explore and practice the course.
 
 See the [full curriculum](curriculum.md) for the week-by-week roadmap.
 New learners should also read the [portfolio submission guide](PORTFOLIO-GUIDE.md).
+Preview the [CoraxShift learning portal](website/README.md), browse the [curated open-source project references](OPEN-SOURCE-PROJECTS.md), and compare the [AWS, Azure, and Google Cloud architecture diagrams](CLOUD-ARCHITECTURES.md).
 
 ## **What is CoraxShift?**
 
@@ -112,10 +113,10 @@ We do not promise a job. No academy can promise that. What we promise is that yo
 
 ## **How to start**
 
-1. Open this repo in Codespaces
-2. Open the [Week 1 overview](modules/01-essentials/00-overview.md)
-3. Start Class 1, do the lab, push your work
-4. Share your Week 1 assignment on LinkedIn with your CoraxReads explanation
+1. Open this private repo in Codespaces and preview the [learning portal](website/README.md).
+2. Open the [Week 1 overview](modules/01-essentials/00-overview.md).
+3. Start Class 1, do the lab, and push your work to your separate portfolio repo.
+4. Share your Week 1 assignment only after checking it contains no credentials or private course material.
 
 The lessons live here. Your own exercises, screenshots, and portfolio work belong in your separate portfolio repository. Never put passwords, API keys, or cloud credentials in either repository.
 

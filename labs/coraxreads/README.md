@@ -5,7 +5,7 @@ This small bookstore app is a course lab. It is not production-ready and must no
 ## What is inside
 
 - `server.js`: Express API, database-backed health check, and book catalog endpoint.
-- `public/index.html`: simple browser UI.
+- `public/index.html`: responsive bookstore storefront with a searchable, database-backed catalog.
 - `db/init.sql`: sample PostgreSQL schema and data.
 - `Dockerfile` and `compose.yaml`: local app + database environment.
 - `test/server.test.js`: API tests that do not require a live database.

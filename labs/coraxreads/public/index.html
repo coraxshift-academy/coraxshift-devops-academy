@@ -3,45 +3,289 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CoraxReads Bookshop</title>
+    <meta name="theme-color" content="#f8f4eb">
+    <meta name="description" content="Find your next favorite read at CoraxReads, a little bookstore built by learners.">
+    <title>CoraxReads | Find your next great read</title>
     <style>
-      body { font: 1rem/1.5 system-ui, sans-serif; margin: 2rem auto; max-width: 48rem; padding: 0 1rem; }
-      li { margin-block: 0.75rem; }
-      .muted { color: #555; }
+      :root {
+        color-scheme: light;
+        --ink: #242d42;
+        --muted: #737681;
+        --paper: #fffdf8;
+        --cream: #f8f4eb;
+        --coral: #df7962;
+        --line: #e9e3d8;
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--paper); color: var(--ink); }
+      button, input { font: inherit; }
+      a { color: inherit; }
+      .site-header { height: 74px; padding: 0 max(calc((100vw - 1100px) / 2), 5vw); display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #e8e2d7; background: #fffdf8e8; }
+      .brand { display: flex; align-items: center; gap: 9px; color: var(--ink); font-size: 19px; font-weight: 800; letter-spacing: -1px; text-decoration: none; }
+      .brand-mark { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 10px 10px 10px 3px; background: var(--coral); color: white; font: 800 17px Georgia, serif; }
+      .brand span:last-child span { color: var(--coral); }
+      .main-nav { display: flex; align-items: center; gap: 29px; }
+      .main-nav a { color: #626775; font-size: 11px; font-weight: 600; text-decoration: none; }
+      .main-nav a:hover { color: var(--coral); }
+      .header-button, .hero-button { display: inline-flex; min-height: 39px; align-items: center; justify-content: center; gap: 9px; padding: 0 15px; border: 0; border-radius: 5px; background: var(--ink); color: white; cursor: pointer; font-size: 10px; font-weight: 700; text-decoration: none; }
+      .hero { position: relative; min-height: 470px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 20px; padding: 55px max(calc((100vw - 1100px) / 2), 5vw); overflow: hidden; background: var(--cream); }
+      .hero::after { content: ""; position: absolute; top: -190px; right: -85px; width: 550px; height: 550px; border: 1px solid #ded5c644; border-radius: 50%; box-shadow: 0 0 0 37px #ded5c622, 0 0 0 75px #ded5c622; }
+      .hero-copy { position: relative; z-index: 1; }
+      .eyebrow { margin: 0 0 15px; color: #b65f4f; font-size: 9px; font-weight: 800; letter-spacing: 1.8px; }
+      .hero h1 { max-width: 520px; margin: 0 0 15px; color: var(--ink); font: 800 clamp(42px, 5vw, 65px)/1.07 Georgia, serif; letter-spacing: -2.4px; }
+      .hero h1 span { color: var(--coral); font-style: italic; }
+      .hero-copy > p:not(.eyebrow) { max-width: 425px; margin: 0 0 23px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+      .hero-button { min-height: 43px; padding: 0 17px; background: var(--coral); }
+      .hero-button:hover, .header-button:hover { filter: brightness(.95); }
+      .hero-note { display: flex; align-items: center; gap: 7px; margin-top: 21px; color: #82848a; font-size: 9px; }
+      .hero-note span { color: #778448; font-size: 13px; }
+      .shelf-scene { position: relative; z-index: 1; height: 330px; display: flex; align-items: center; justify-content: center; }
+      .scene-circle { position: absolute; width: 290px; height: 290px; border: 1px solid #d6cdbd; border-radius: 50%; background: #eee5d4; }
+      .book-stack { position: relative; width: 275px; height: 235px; transform: rotate(-4deg); }
+      .large-book { position: absolute; width: 130px; height: 190px; padding: 18px 12px; border: 5px solid #f5e8ce; border-radius: 5px 8px 4px 3px; box-shadow: 9px 12px 19px #3e302929, inset 7px 0 #ffffff28; color: #fff1d2; text-align: center; font: 800 10px/1.5 Georgia, serif; }
+      .large-book::before { content: "✦"; display: block; margin: 15px auto 22px; color: #f2cf89; font: 20px Georgia, serif; }
+      .large-book-one { z-index: 2; top: 5px; left: 34px; background: #61728a; transform: rotate(-9deg); }
+      .large-book-two { z-index: 3; top: 22px; left: 115px; background: #cd715b; transform: rotate(7deg); }
+      .large-book-three { z-index: 1; top: 37px; left: 183px; background: #9a9661; transform: rotate(15deg); }
+      .book-label { position: absolute; z-index: 4; bottom: 1px; left: 70px; padding: 10px 15px; border: 1px solid #e2d8c6; border-radius: 5px; background: var(--paper); box-shadow: 0 5px 14px #4c40231c; color: #6b6d74; font-size: 9px; font-weight: 700; }
+      .shop-content { max-width: 1100px; margin: 0 auto; padding: 67px 0 80px; }
+      .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 25px; }
+      .section-heading h2 { margin: 0; color: var(--ink); font: 800 34px/1.2 Georgia, serif; letter-spacing: -1px; }
+      .section-heading h2 span { color: var(--coral); font-style: italic; }
+      .section-heading > p { max-width: 345px; margin: 0 0 3px; color: var(--muted); font-size: 10px; line-height: 1.7; }
+      .catalog-tools { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 15px; border: 1px solid var(--line); border-radius: 7px; background: white; }
+      .catalog-tools label { display: flex; flex: 1; align-items: center; gap: 9px; color: #a16354; font-size: 17px; }
+      .catalog-tools input { width: 100%; max-width: 360px; border: 0; outline: 0; color: var(--ink); font-size: 10px; }
+      .catalog-tools input::placeholder { color: #a0a0a5; }
+      .catalog-count { color: #81838a; font-size: 9px; white-space: nowrap; }
+      .catalog-status { min-height: 20px; margin: 17px 0 4px; color: #777983; font-size: 10px; }
+      .catalog-status.error { color: #a44736; }
+      .retry-button { margin-left: 8px; padding: 4px 8px; border: 1px solid #d8cfc0; border-radius: 4px; background: white; color: var(--ink); cursor: pointer; font-size: 9px; font-weight: 700; }
+      .book-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .book-card { min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: white; transition: transform .18s, box-shadow .18s; }
+      .book-card:hover { transform: translateY(-3px); box-shadow: 0 9px 24px #30291f13; }
+      .book-art { height: 190px; display: grid; place-items: center; overflow: hidden; border-radius: 5px; background: #f3eddf; }
+      .book-cover { width: 113px; height: 158px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 9px; border: 4px solid #f5e8ce; border-radius: 4px 7px 4px 3px; box-shadow: 8px 10px 15px #3e302927, inset 6px 0 #ffffff25; color: #fff4d9; text-align: center; transform: rotate(-3deg); }
+      .book-cover::before { content: "✦"; margin-bottom: 17px; color: #f2d191; font-size: 17px; }
+      .book-cover strong { font: 800 12px/1.35 Georgia, serif; }
+      .book-cover small { margin-top: 12px; font-size: 7px; letter-spacing: 1px; }
+      .book-cover.tone-0 { background: #61728a; }
+      .book-cover.tone-1 { background: #cd715b; transform: rotate(3deg); }
+      .book-cover.tone-2 { background: #858552; transform: rotate(-2deg); }
+      .book-cover.tone-3 { background: #405f65; transform: rotate(2deg); }
+      .book-info { padding: 13px 3px 4px; }
+      .book-info h3 { margin: 0 0 4px; color: var(--ink); font: 700 14px/1.45 Georgia, serif; }
+      .book-author { margin: 0; color: var(--muted); font-size: 9px; }
+      .book-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 13px; padding-top: 11px; border-top: 1px solid #f0ece4; }
+      .book-price { color: #536147; font-size: 11px; font-weight: 800; }
+      .book-tag { color: #a0a0a4; font-size: 8px; }
+      .empty-state { grid-column: 1 / -1; padding: 35px 20px; border: 1px dashed #d9d3c7; border-radius: 7px; color: var(--muted); font-size: 11px; text-align: center; }
+      .about-band { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 26px max(calc((100vw - 1100px) / 2), 5vw); background: #e8e6f4; }
+      .about-band h2 { margin: 0 0 6px; color: var(--ink); font: 800 20px Georgia, serif; }
+      .about-band p { max-width: 550px; margin: 0; color: #6e6b80; font-size: 10px; line-height: 1.7; }
+      .about-stamp { min-width: 75px; height: 75px; display: grid; place-items: center; border: 1px solid #bcb8d8; border-radius: 50%; color: #77729e; font: 700 8px/1.5 Georgia, serif; text-align: center; transform: rotate(8deg); }
+      .site-footer { min-height: 76px; padding: 17px max(calc((100vw - 1100px) / 2), 5vw); display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+      .site-footer p { margin: 0; color: #82848a; font-size: 9px; }
+      .site-footer small { color: #999aa0; font-size: 8px; }
+      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
+
+      @media (max-width: 1150px) {
+        .shop-content { margin: 0 5vw; }
+      }
+      @media (max-width: 700px) {
+        .site-header { height: 65px; padding: 0 19px; }
+        .main-nav { display: none; }
+        .header-button { min-height: 35px; padding: 0 11px; font-size: 9px; }
+        .hero { min-height: 650px; grid-template-columns: 1fr; gap: 0; padding: 46px 22px 10px; }
+        .hero h1 { font-size: 51px; }
+        .hero-copy > p:not(.eyebrow) { font-size: 11px; }
+        .shelf-scene { height: 290px; margin-top: -6px; transform: scale(.88); }
+        .hero::after { top: auto; right: -80px; bottom: -240px; }
+        .shop-content { margin: 0 19px; padding: 50px 0 57px; }
+        .section-heading { align-items: start; flex-direction: column; gap: 10px; }
+        .section-heading h2 { font-size: 30px; }
+        .book-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .book-art { height: 160px; }
+        .book-cover { width: 90px; height: 130px; }
+        .book-cover strong { font-size: 10px; }
+        .book-info h3 { font-size: 12px; }
+        .about-band { padding: 23px 20px; }
+        .about-band h2 { font-size: 17px; }
+        .site-footer { align-items: start; flex-direction: column; padding: 19px 20px; }
+      }
+      @media (max-width: 390px) {
+        .book-grid { grid-template-columns: 1fr; }
+        .book-art { height: 190px; }
+        .book-cover { width: 113px; height: 158px; }
+        .catalog-count { font-size: 8px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1>CoraxReads</h1>
-      <p class="muted">A small bookstore for learning DevOps.</p>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="CoraxReads home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>corax<span>reads</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#collection">Browse books</a>
+        <a href="#about">Our little shop</a>
+      </nav>
+      <a class="header-button" href="#collection">Find a good read <span aria-hidden="true">→</span></a>
     </header>
+
     <main>
-      <h2>Book catalog</h2>
-      <p id="status" role="status">Loading books...</p>
-      <ul id="books"></ul>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A LITTLE MAGIC ON EVERY PAGE</p>
+          <h1>Find your next<br><span>great read.</span></h1>
+          <p>A cozy little bookstore for curious minds. Browse the shelves, find a story that speaks to you, and make room for a new favorite.</p>
+          <a class="hero-button" href="#collection">Explore the shelves <span aria-hidden="true">↓</span></a>
+          <div class="hero-note"><span aria-hidden="true">✦</span> Thoughtful reads, picked with care.</div>
+        </div>
+        <div class="shelf-scene" role="img" aria-label="A colorful stack of books from the CoraxReads bookstore">
+          <div class="scene-circle"></div>
+          <div class="book-stack">
+            <div class="large-book large-book-one">THE ART OF<br>STARTING</div>
+            <div class="large-book large-book-two">A STORY<br>TO KEEP</div>
+            <div class="large-book large-book-three">SLOW<br>MORNINGS</div>
+          </div>
+          <div class="book-label">A good story changes everything.</div>
+        </div>
+      </section>
+
+      <section class="shop-content" id="collection">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PICKED FOR YOUR NEXT CHAPTER</p>
+            <h2>Explore the <span>collection</span></h2>
+          </div>
+          <p>Every book has a place on our shelf. Search by title or author to find the one you're looking for.</p>
+        </div>
+        <div class="catalog-tools">
+          <label for="book-search"><span aria-hidden="true">⌕</span><span class="visually-hidden">Search books</span><input id="book-search" type="search" placeholder="Search by title or author" autocomplete="off"></label>
+          <span id="catalog-count" class="catalog-count">Loading the shelves…</span>
+        </div>
+        <p id="status" class="catalog-status" role="status" aria-live="polite">A moment while we open the shop…</p>
+        <div id="books" class="book-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="about-band" id="about">
+        <div>
+          <p class="eyebrow">A BOOKSHOP WITH A STORY</p>
+          <h2>Built by learners. Made for readers.</h2>
+          <p>CoraxReads is the little bookstore at the heart of the CoraxShift DevOps Academy. Week by week, students build the technology that keeps this shop running.</p>
+        </div>
+        <div class="about-stamp" aria-label="Read, learn, grow">READ<br>LEARN<br>GROW</div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#" aria-label="CoraxReads home"><span class="brand-mark" aria-hidden="true">C</span><span>corax<span>reads</span></span></a>
+      <p>Thanks for stopping by. Come back for another chapter.</p>
+      <small>CoraxReads teaching app · Sample books and prices only</small>
+    </footer>
+
     <script>
+      const status = document.querySelector("#status");
+      const list = document.querySelector("#books");
+      const search = document.querySelector("#book-search");
+      const count = document.querySelector("#catalog-count");
+      let books = [];
+
+      function renderBooks() {
+        const query = search.value.trim().toLowerCase();
+        const visibleBooks = books.filter((book) =>
+          `${book.title} ${book.author}`.toLowerCase().includes(query),
+        );
+        list.replaceChildren();
+
+        if (!visibleBooks.length) {
+          const empty = document.createElement("p");
+          empty.className = "empty-state";
+          empty.textContent = books.length
+            ? "No books match that search. Try another title or author."
+            : "No books are available yet. Check back soon.";
+          list.append(empty);
+        }
+
+        for (const [index, book] of visibleBooks.entries()) {
+          const card = document.createElement("article");
+          card.className = "book-card";
+          const art = document.createElement("div");
+          art.className = "book-art";
+          art.setAttribute("aria-hidden", "true");
+          const cover = document.createElement("div");
+          cover.className = `book-cover tone-${(book.id - 1) % 4}`;
+          const coverTitle = document.createElement("strong");
+          coverTitle.textContent = book.title;
+          const coverAuthor = document.createElement("small");
+          coverAuthor.textContent = book.author;
+          cover.append(coverTitle, coverAuthor);
+          art.append(cover);
+
+          const info = document.createElement("div");
+          info.className = "book-info";
+          const title = document.createElement("h3");
+          title.textContent = book.title;
+          const author = document.createElement("p");
+          author.className = "book-author";
+          author.textContent = `by ${book.author}`;
+          const meta = document.createElement("div");
+          meta.className = "book-meta";
+          const price = document.createElement("span");
+          price.className = "book-price";
+          price.textContent = new Intl.NumberFormat(undefined, {
+            style: "currency",
+            currency: "USD",
+          }).format(book.price_cents / 100);
+          const tag = document.createElement("span");
+          tag.className = "book-tag";
+          tag.textContent = index === 0 ? "A reader favorite" : "On our shelves";
+          meta.append(price, tag);
+          info.append(title, author, meta);
+          card.append(art, info);
+          list.append(card);
+        }
+        count.textContent = `${visibleBooks.length} ${visibleBooks.length === 1 ? "book" : "books"}`;
+        status.textContent = "";
+      }
+
       async function loadBooks() {
-        const status = document.querySelector("#status");
-        const list = document.querySelector("#books");
+        status.classList.remove("error");
+        status.textContent = "A moment while we open the shop…";
+        count.textContent = "Loading the shelves…";
+        list.replaceChildren();
         try {
           const response = await fetch("/api/books");
-          if (!response.ok) throw new Error("Catalog request failed");
-          const books = await response.json();
-          list.replaceChildren();
-          for (const book of books) {
-            const item = document.createElement("li");
-            const title = document.createElement("strong");
-            title.textContent = book.title;
-            item.append(title, ` by ${book.author} - $${(book.price_cents / 100).toFixed(2)}`);
-            list.append(item);
-          }
-          status.textContent = books.length ? "" : "No books are available yet.";
-        } catch {
-          status.textContent = "The catalog is temporarily unavailable. Please try again.";
+          if (!response.ok) throw new Error(`Catalog request failed (${response.status}).`);
+          const data = await response.json();
+          if (!Array.isArray(data)) throw new Error("The catalog response was not a book list.");
+          books = data;
+          renderBooks();
+        } catch (error) {
+          console.error("CoraxReads could not load its book catalog:", error);
+          status.classList.add("error");
+          status.textContent = "We couldn't open the shelves just now. Check that the app and database are running.";
+          count.textContent = "Catalog unavailable";
+          const retry = document.createElement("button");
+          retry.type = "button";
+          retry.className = "retry-button";
+          retry.textContent = "Try again";
+          retry.addEventListener("click", loadBooks);
+          status.append(retry);
         }
       }
 
+      search.addEventListener("input", renderBooks);
       loadBooks();
     </script>
   </body>
