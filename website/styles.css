@@ -80,6 +80,8 @@ h1, h2 { font-family: "Manrope", sans-serif; }
 .hero-stats div { flex: 1; padding: 17px 24px 18px 0; }
 .hero-stats strong { display: block; color: var(--lime); font: 800 20px "Manrope", sans-serif; }
 .hero-stats span { color: #b7bdcb; font-size: 10px; }
+.preview-notice { max-width: 1180px; margin: 20px auto 0; padding: 12px 16px; border: 1px solid #f1d59d; border-radius: 7px; background: #fff8e9; color: #5e4d2a; font-size: 11px; line-height: 1.6; }
+.preview-notice strong { color: #8a5a20; }
 .welcome-band { min-height: 75px; padding: 18px max(calc((100vw - 1180px) / 2), 5.5vw); display: flex; justify-content: space-between; align-items: center; gap: 18px; background: var(--lime); color: #263047; }
 .welcome-band p { margin: 0; font: 700 13px "Manrope", sans-serif; }
 .welcome-band p span { margin-right: 9px; color: #ed6d57; }

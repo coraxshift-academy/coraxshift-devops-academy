@@ -27,6 +27,19 @@ let learnerState = { name: "", results: {} };
 let quizState = null;
 let statusTimer;
 
+function coursePageUrl(markdownPath) {
+  return window.location.hostname.endsWith(".github.io")
+    ? markdownPath.replace(/\.md(?=$|[?#])/, ".html")
+    : markdownPath;
+}
+
+function renderStaticMarkdownLinks() {
+  if (!window.location.hostname.endsWith(".github.io")) return;
+  for (const link of document.querySelectorAll("a[href]")) {
+    link.href = coursePageUrl(link.getAttribute("href"));
+  }
+}
+
 function showStatus(message) {
   siteStatus.textContent = message;
   siteStatus.classList.add("visible");
@@ -133,7 +146,7 @@ function renderWeeks() {
     const links = document.createElement("div");
     links.className = "week-links";
     links.append(
-      makeLink(`../modules/${week.folder}/00-overview.md`, "Explore lessons →", ""),
+      makeLink(coursePageUrl(`../modules/${week.folder}/00-overview.md`), "Explore lessons →", ""),
     );
     const quizButton = document.createElement("button");
     quizButton.type = "button";
@@ -182,7 +195,7 @@ function renderSearch() {
   for (const { item } of matches) {
     const link = document.createElement("a");
     link.className = "search-result";
-    link.href = item.path;
+    link.href = coursePageUrl(item.path);
     const title = document.createElement("strong");
     title.textContent = item.title;
     const week = document.createElement("small");
@@ -416,6 +429,7 @@ async function loadSearchIndex() {
   }
 }
 
+renderStaticMarkdownLinks();
 renderWeeks();
 learnerState = readLearnerState();
 renderProgress();

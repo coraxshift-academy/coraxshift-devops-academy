@@ -1,6 +1,6 @@
-# CoraxShift learning portal (private preview)
+# CoraxShift learning portal (public preview)
 
-This is a static, local-first course portal. It does not need a cloud account, backend, database, or third-party JavaScript package. The lesson Markdown remains the source of truth; weekly quizzes are read from their lesson files.
+This is a static course preview. The repository and this Pages site are currently public, so all lesson files, quiz questions, answers, and explanations are accessible. This preview does not require sign-in, enforce week-by-week access, or verify assignment completion. Do not use its local progress as proof of course completion, and do not enter or publish personal student information.
 
 ## Preview in the repository Codespace
 
@@ -13,7 +13,7 @@ python3 -m http.server 8080
 
 Open `http://localhost:8080/website/` in the preview browser. If Codespaces asks about port visibility, keep port 8080 **Private**. Stop the server with `Ctrl+C`.
 
-The portal is designed for local/private preview. Do not publish this private, paid course repository or its lesson files to a public Pages site.
+The eventual student portal is planned to use invite-only sign-in and server-verified progress. Until that replacement is configured and tested, treat this site and repository as fully public.
 
 ## Learner data and quizzes
 

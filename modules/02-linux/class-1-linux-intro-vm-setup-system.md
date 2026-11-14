@@ -22,10 +22,12 @@ Home: Your main folder. In Codespace it is /home/codespace
 ## **Step 1: Check your Linux**
 
 Type:
+```bash
 cat /etc/os-release
 whoami
 pwd
 hostname
+```
 
 What it does:
 cat /etc/os-release: Shows your Linux version
@@ -34,10 +36,16 @@ pwd: Shows your current folder
 hostname: Shows your computer name
 
 Expected output:
+```text
 PRETTY_NAME="Ubuntu 24.04.5 LTS"
 codespace
 /workspaces/coraxshift-devops-academy
-Your version numbers may be slightly different. That is okay.
+codespaces-example
+```
+
+This is a representative result, not a screenshot from your computer. Your hostname, username, workspace path, and Ubuntu patch version can differ. Compare the meaning, not every character.
+
+![Illustrated Ubuntu terminal showing representative output for the four system-check commands. Hostname and workspace path are examples and will differ.](images/class-1-system-check.svg)
 
 ## **Step 2: System control commands**
 

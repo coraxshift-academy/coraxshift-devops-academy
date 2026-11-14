@@ -106,19 +106,19 @@ Do not use `rm -rf` for this exercise. Restore the original folder immediately.
 
 What to submit: Screenshot 8 - The HTTP status before and after restoring the web root, plus notes: What caused the error? How did you restore the site safely?
 
-## **Task 9 - LinkedIn Post**
+## **Task 9 - Share Your Learning**
 
-Steps: Write LinkedIn post with sections: Linux, Nginx Deploy, Logs, Resources, Break and Fix. Add 1 screenshot of localhost site and 1 of recovery. Add credit: P.S. This post is part of CoraxShift DevOps Academy - Week 2. Learn by building: https://github.com/coraxshift-academy
-What to submit: Screenshot 9 - Published LinkedIn post plus URL.
+Steps: Write a short reflection with sections: Linux, Nginx Deploy, Logs, Resources, Break and Fix. You may publish it on LinkedIn or keep it in your private portfolio. Add one sanitized screenshot of the localhost site and one of recovery. If publishing publicly, add this credit: P.S. This post is part of CoraxShift DevOps Academy - Week 2. Learn by building: https://github.com/coraxshift-academy
+What to submit: Your reflection; include the LinkedIn URL only if you choose to publish publicly.
 
 ## **Submission Checklist**
 
 - Tasks 1 to 9 in order
-- Screenshots 1 to 9, readable, with personal details hidden or limited to a chosen display name
+- Screenshots 1 to 8 as required by the tasks, readable and sanitized
 - No passwords, tokens, keys, or personal information you do not want to publish
 - All writing in your own words
-- LinkedIn post with CoraxShift credit
+- Public LinkedIn post and CoraxShift credit only if you choose to publish publicly
 
 ## **Final Submission**
 
-Submit your portfolio folder link for modules/02-linux/assignment-2 plus your LinkedIn post URL.
+Submit your portfolio folder link for modules/02-linux/assignment-2. Include a LinkedIn post URL only if you chose to publish publicly.
