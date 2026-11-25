@@ -25,3 +25,4 @@ __pycache__/
 id_rsa*
 id_ed25519*
 .DS_Store
+k8s-run.log
