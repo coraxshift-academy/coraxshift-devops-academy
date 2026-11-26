@@ -1,0 +1,34 @@
+# Unit tests for the alert rules. Run:  promtool test rules tests/alerts_test.yml  (from the prometheus folder)
+rule_files:
+  - ../rules/alerts.yml
+evaluation_interval: 5s
+tests:
+  - interval: 5s
+    input_series:
+      - series: 'up{job="shop-app"}'
+        values: '1 1 1 0 0 0 0 0 0 0'
+    alert_rule_test:
+      - eval_time: 10s
+        alertname: ShopDown
+        exp_alerts: []
+      - eval_time: 40s
+        alertname: ShopDown
+        exp_alerts:
+          - exp_labels: {severity: critical, job: shop-app}
+            exp_annotations:
+              summary: "The shop app is not answering (up == 0)"
+
+  - interval: 5s
+    input_series:
+      - series: 'shop_orders_total{status="ok"}'
+        values: '0+5x20'
+      - series: 'shop_orders_total{status="failed"}'
+        values: '0+5x20'
+    alert_rule_test:
+      - eval_time: 90s
+        alertname: HighOrderErrors
+        exp_alerts:
+          - exp_labels: {severity: warning}
+            exp_annotations:
+              summary: "More than 20% of orders are failing"
+              description: "Error ratio is 50%."
