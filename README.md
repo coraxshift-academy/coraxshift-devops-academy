@@ -1,128 +1,69 @@
-# CoraxShift DevOps Academy
+<div align="center">
 
-> Learn by building. Break it. Fix it. Ship it.
+<img src="courses/02-linux-for-beginners/assets/banner.jpg" alt="Coraxshift DevOps Academy" width="100%">
 
-**12-week roadmap** | **3 classes / week** | **2 hours / class** | **1 learning project** | **12 badges**
+# Coraxshift DevOps Academy
 
-> **Course status:** All 12 weeks have an overview, three class guides, a practical assignment, troubleshooting notes, and a weekly quiz. A local-first learning portal and CoraxReads teaching app make it easier to explore and practice the course.
+### Learn. Build. Deploy. Grow.
 
-See the [full curriculum](curriculum.md) for the week-by-week roadmap.
-New learners should also read the [portfolio submission guide](PORTFOLIO-GUIDE.md).
-Start with the [Getting Started setup guide](GETTING-STARTED.md) for the recommended environment, OS-specific commands, and when each tool is needed.
-Preview the [CoraxShift learning portal](website/README.md), browse the [curated open-source project references](OPEN-SOURCE-PROJECTS.md), and compare the [AWS, Azure, and Google Cloud architecture diagrams](CLOUD-ARCHITECTURES.md).
+**DevOps in plain words. From your first command to your first real deployment.**
 
-## **What is CoraxShift?**
+[Website](https://coraxshift-academy.github.io/) · [Join the free class waitlist](https://forms.gle/vLZrpkL68evBRUzw7)
 
-CoraxShift is a portfolio-based DevOps academy. You do not just watch. You build, you break, you fix, you ship.
+</div>
 
-One project from Week 1 to Week 12. One portfolio that proves what you can do.
+---
 
-## **Who is this for?**
+## Never typed a command before? Start here.
 
-- Beginners with no tech background
-- Career changers who want proof, not just certificates
-- Students who want to explain what they built in plain words
-- Anyone who wants to learn DevOps by doing, not by memorizing
+You do not need a tech background, a powerful laptop, or a paid account to begin. Every lesson explains each command, shows what you should see, and tells you what to do when something goes wrong.
 
-No experience needed. We start from zero and explain every command.
+You will not just read. You will **build it, break it on purpose, and fix it**, until it finally clicks.
 
-## **What you will build**
+## Your learning path
 
-**CoraxReads** - a sample bookstore project used to learn DevOps one step at a time.
+Take the courses in order. Each one builds on the one before it.
 
-- Week 1: Understand how a browser finds and talks to a website
-- Week 2: Build and serve CoraxReads with React and Nginx, run a maintenance drill, and deploy a static portfolio page in a Codespace
-- Weeks 3-8: Learn scripting, Git, delivery planning, Terraform, Ansible, and Docker
-- Week 9: Learn the cloud using one AWS account and a billing alert
-- Weeks 10-12: Learn Kubernetes, monitoring, CI/CD, and present the capstone
+| # | Course | You will learn to | Status |
+|---|--------|-------------------|--------|
+| 01 | [Internet & Tech Essentials](courses/01-internet-tech-essentials) | See how the internet, servers and apps really work | Ready |
+| 02 | [Linux for Beginners](courses/02-linux-for-beginners) | Move around a server and run it with confidence | Ready |
+| 03 | [Bash Scripting](courses/03-bash-scripting-for-beginners) | Automate boring work with small scripts | Ready |
+| 04 | [Git & GitHub](courses/04-git-and-github-for-beginners) | Track changes and work in a team | Ready (Class 3 being tested) |
+| 05 | [Software Delivery Lifecycle](courses/05-software-delivery-lifecycle-for-beginners) | Understand how software goes from idea to users | Ready |
+| 06 | [Terraform](courses/06-terraform-for-beginners) | Build infrastructure from code | Ready |
+| 07 | [Ansible](courses/07-ansible-for-beginners) | Set up many servers the same way, every time | Ready |
+| 08 | [Docker](courses/08-docker-for-beginners) | Package an app so it runs anywhere | Beta, being tested |
+| 09 | [AWS](courses/09-aws-for-beginners) | Use the cloud safely, with costs under control | Beta, being tested |
+| 10 | [Kubernetes](courses/10-kubernetes-for-beginners) | Run and heal many containers | Beta, being tested |
+| 11 | [CI/CD](courses/11-cicd-for-beginners) | Check and ship every change automatically | Beta, being tested |
+| 12 | [Monitoring & Observability](courses/12-monitoring-for-beginners) | Know when something breaks, before users do | Beta, being tested |
 
-Your portfolio starts in Week 1. Every week you push.
+**Ready** means the commands were run and checked. **Beta** means the course is written and partly checked, and we are finishing hands-on testing. Tell us if something does not match your screen.
 
-## **How it works**
+## How every course works
 
-- **3 classes per week, 2 hours each**
-- **Class guides:** Where to run the lab, plain-language command walkthroughs, and expected checks where relevant
-- **Every week:** Hands-on project, push to portfolio, pass checklist
-- **Every week:** Quiz at end of Class 3, 12 questions, 20 minutes
-- **Every week:** 90 percent earns the weekly badge
+- **Short classes.** Each one has a clear goal and a "check yourself" step.
+- **Labs in your browser.** Use GitHub Codespaces, so there is nothing to install.
+- **Cost boxes.** Every lab tells you what it costs and how to clean up.
+- **Quiz and assignment.** Prove you can do it, not just read about it.
 
-## **12-Week Curriculum**
+## Open a course in 2 minutes
 
-| Week | Focus | What you ship |
-| --- | --- | --- |
-| [1. Essentials](modules/01-essentials/00-overview.md) | Internet, networking, tools | Internet diagram, workstation check, project explanation |
-| [2. Linux](modules/02-linux/00-overview.md) | Linux, React, Nginx, operations | React deployment, operations/recovery report, static portfolio page |
-| [3. Bash](modules/03-bash/00-overview.md) | Shell automation | Health check and verified backup scripts |
-| [4. Git](modules/04-git/00-overview.md) | GitHub collaboration | Reviewed pull request and conflict-resolution evidence |
-| [5. SDLC](modules/05-sdlc/00-overview.md) | Plan, test, release | Feature issue, test plan, release and rollback notes |
-| [6. Terraform](modules/06-terraform/00-overview.md) | Infrastructure as code | Local Docker infrastructure, reviewed plan, cleanup proof |
-| [7. Ansible](modules/07-ansible/00-overview.md) | Configuration automation | Repeatable Nginx playbook and idempotency evidence |
-| [8. Docker](modules/08-docker/00-overview.md) | Containers and Compose | App + database stack with persistent data |
-| [9. AWS](modules/09-aws/00-overview.md) | Cloud foundations | Cost guardrails, small approved deployment, teardown |
-| [10. Kubernetes](modules/10-kubernetes/00-overview.md) | Local orchestration | Local cluster, workload, Service, probes, runbook |
-| [11. CI/CD + observability](modules/11-cicd-observability/00-overview.md) | Delivery and operations | CI workflow, dashboard, alert, recovery notes |
-| [12. Capstone](modules/12-capstone/00-overview.md) | Integration and presentation | Demonstrable system, documentation, recovery, reflection |
+1. Click the green **Code** button above, then **Codespaces**, then **Create codespace on main**.
+2. Open a course folder from the table.
+3. Read `GETTING-STARTED.md`, then start Class 1.
 
-## **How the project fits together**
+## About the academy
 
-We start with a simple page, then add the parts a real application needs. Think of it like a bookstore: the page is the shop window, the backend is the clerk handling requests, and the database is the stock ledger.
+Coraxshift DevOps Academy was founded by working engineers who teach the way they wish they had been taught: practical, honest and friendly. The teaching style comes from real life, including years of running a cybercafe where systems had to work every single day for real customers.
 
-```text
-Browser
-   |
-   v
-Web page (HTML, CSS, JavaScript)
-   |
-   v
-Backend (Node.js + Express)
-   |
-   v
-Database (PostgreSQL)
-```
+## Join us
 
-In Week 2, the React practice app and a separate static page are served by Nginx on your Codespace. That is a local learning exercise, not the finished cloud architecture.
-The response travels back along the same path to the browser.
+**[Join the free class waitlist](https://forms.gle/vLZrpkL68evBRUzw7)** and be first to hear about the start date. More on the **[website](https://coraxshift-academy.github.io/)**.
 
-## **Quiz and Badge**
+<div align="center">
 
-- **Quiz:** Per week, not per class. 12 questions per week: 8 single-answer, 4 multiple-answer
-- **Style:** Technical, not ABC. Scenario, output, and fix based, from that week's lab
-- **Pass:** 11 out of 12, 90 percent, earns the weekly badge
-- **If below 90 percent:** Review, retake once
-- **Total:** 12 badges. Each badge goes in your portfolio README
+**Learn. Build. Deploy. Grow.**
 
-## **What you need**
-
-- A browser and access to this private course repo
-- A GitHub account with Codespaces access, or a local editor/Git setup
-- 5 to 7 hours most weeks; plan for about 9.5 hours in Week 2 because it has three required assignments
-- Follow the [Getting Started setup guide](GETTING-STARTED.md); install tools only when their week needs them
-
-No cloud account until Week 9. In Weeks 6 to 8, practice Terraform, Ansible, and Docker locally. In Week 9, use one AWS account, set a billing alert before creating resources, and remove resources when you finish. Week 10 uses local Kubernetes. AWS billing alerts are not spending caps, so follow the cleanup checklist and review current pricing.
-
-## **Example stack for CoraxReads**
-
-- **Frontend:** React, HTML, CSS, JavaScript
-- **Backend:** Node.js + Express
-- **Database:** PostgreSQL
-
-## **What we promise**
-
-We promise skills and proof. A portfolio you can show, a demo you can explain, and badges you earned by passing technical quizzes.
-
-We do not promise a job. No academy can promise that. What we promise is that you will finish with work you can defend in an interview.
-
-## **How to start**
-
-1. Open this private repo in Codespaces and preview the [learning portal](website/README.md).
-2. Open the [Week 1 overview](modules/01-essentials/00-overview.md).
-3. Start Class 1, do the lab, and push your work to your separate portfolio repo.
-4. Share your Week 1 assignment only after checking it contains no credentials or private course material.
-
-The lessons live here. Your own exercises, screenshots, and portfolio work belong in your separate portfolio repository. Never put passwords, API keys, or cloud credentials in either repository.
-
-## **For students**
-
-This repo is private because students pay for it. Your portfolio repo is public. That is where you show your work.
-
-Build. Break. Fix. Ship. Welcome to CoraxShift.
+</div>
