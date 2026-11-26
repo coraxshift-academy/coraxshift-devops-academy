@@ -66,7 +66,7 @@ You will learn Docker properly later in the DevOps path.
 **Run it:**
 
 ```bash
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 sudo service nginx start
 node --version
 npm --version
@@ -168,7 +168,7 @@ Done
 ```bash
 cd ~/apps/uptime-kuma
 nohup node server/server.js --host=127.0.0.1 > ~/uptime-kuma.log 2>&1 &
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 ```
 
 Wait about 10 seconds, then check on it:
@@ -528,7 +528,7 @@ HTTP 502
 ```bash
 cd ~/apps/uptime-kuma
 nohup node server/server.js --host=127.0.0.1 > ~/uptime-kuma.log 2>&1 &
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 ```
 
 Wait about 10 seconds, then verify:

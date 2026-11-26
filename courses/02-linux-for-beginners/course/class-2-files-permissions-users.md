@@ -35,7 +35,7 @@ Last class you learned to find your way around. Today you start *setting a serve
 **Why this matters:** starting from the same folder means every command below works exactly as written.
 
 ```bash
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 ls practice/lab/
 ```
 
@@ -324,7 +324,7 @@ ls -lh numbers.txt numbers.tar.gz
 Now try **zip**, the format Windows and macOS use, then go back to home base:
 
 ```bash
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 sudo apt install -y zip unzip
 zip practice/lab/notes.zip practice/lab/note.txt
 unzip -l practice/lab/notes.zip

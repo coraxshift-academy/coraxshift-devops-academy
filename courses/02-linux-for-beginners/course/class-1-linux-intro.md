@@ -49,13 +49,13 @@ Each step follows the same five parts, so you always know what is coming:
 In your Codespace, open the terminal (menu **☰ → Terminal → New Terminal**, or press **Ctrl + `**). You will see a **prompt**, the line waiting for you to type. It looks something like this:
 
 ```text
-@your-github-name ➜ /workspaces/linux-for-beginners (main) $
+@your-github-name ➜ /workspaces/coraxshift-devops-academy (main) $
 ```
 
 **Run it:**
 
 ```bash
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 ```
 
 **What it does:** `cd` means *change directory*. It moves you into the course folder. Directory is just another word for folder.
@@ -94,7 +94,7 @@ NAME="Ubuntu"
 VERSION_ID="24.04"
 ...
 codespace
-/workspaces/linux-for-beginners
+/workspaces/coraxshift-devops-academy
 codespaces-xxxxxx
 ```
 
@@ -182,15 +182,15 @@ drwxr-xr-x 3 root      root        60 Nov 19 23:15 ..
 -rw-r--r-- 1 codespace codespace 9452 Nov 19 23:15 GETTING-STARTED.md
 -rw-r--r-- 1 codespace codespace 2062 Nov 19 23:15 README.md
 ...
-/workspaces/linux-for-beginners/practice/lab
-/workspaces/linux-for-beginners
+/workspaces/coraxshift-devops-academy/practice/lab
+/workspaces/coraxshift-devops-academy
 ```
 
 **If yours looks different:**
 
 - You may see extra hidden entries like `.git` or `.github`. Those are normal.
 - `cd: practice/lab: No such file or directory` means `mkdir` didn't run or you were in another folder. Run Step 0, then this step again.
-- Lost? `cd /workspaces/linux-for-beginners` always brings you back.
+- Lost? `cd /workspaces/coraxshift-devops-academy` always brings you back.
 
 ## Step 4: Tour the Linux file system
 

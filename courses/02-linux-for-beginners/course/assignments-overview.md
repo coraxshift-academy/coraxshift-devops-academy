@@ -78,10 +78,10 @@ Posting on LinkedIn is optional. A private portfolio entry counts just as much.
 Codespaces stop when you're idle, and stopped programs don't restart on their own. When you come back:
 
 ```bash
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 sudo service nginx start
 cd ~/apps/uptime-kuma && nohup node server/server.js --host=127.0.0.1 > ~/uptime-kuma.log 2>&1 &
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 ```
 
 The third line only applies once you have installed Uptime Kuma in B. Your files (2048, Uptime Kuma's data and your portfolio page) are kept while the Codespace exists.

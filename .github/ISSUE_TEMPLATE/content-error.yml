@@ -1,0 +1,24 @@
+name: Content error
+description: A wrong explanation, typo, broken link or outdated cost figure
+title: "[Content] "
+labels: ["content"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: File or page
+      placeholder: courses/06-terraform-for-beginners/course/class-2-*.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested correction
+    validations:
+      required: false

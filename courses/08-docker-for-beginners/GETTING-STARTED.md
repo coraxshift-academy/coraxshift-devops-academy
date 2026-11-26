@@ -20,7 +20,7 @@ You do **not** need coding experience, a cloud account, a credit card or a power
 
 ## 🖥️ Step 1: Open your Codespace
 
-1. Go to this repository on GitHub (**coraxshift-academy/docker-for-beginners**) and sign in.
+1. Go to this repository on GitHub (**coraxshift-academy/coraxshift-devops-academy**) and sign in.
 2. Click the green **Code** button, open the **Codespaces** tab, then click **Create codespace on main**.
 3. Wait a minute or two. A VS Code editor opens in your browser with a terminal at the bottom.
 4. In the terminal, run `pwd`. You should see `/workspaces/docker-for-beginners`.

@@ -29,7 +29,7 @@ Take the courses in order. Each one builds on the one before it.
 | 01 | [Internet & Tech Essentials](courses/01-internet-tech-essentials) | See how the internet, servers and apps really work | Ready |
 | 02 | [Linux for Beginners](courses/02-linux-for-beginners) | Move around a server and run it with confidence | Ready |
 | 03 | [Bash Scripting](courses/03-bash-scripting-for-beginners) | Automate boring work with small scripts | Ready |
-| 04 | [Git & GitHub](courses/04-git-and-github-for-beginners) | Track changes and work in a team | Ready (Class 3 being tested) |
+| 04 | [Git & GitHub](courses/04-git-and-github-for-beginners) | Track changes and work in a team | Beta, being tested |
 | 05 | [Software Delivery Lifecycle](courses/05-software-delivery-lifecycle-for-beginners) | Understand how software goes from idea to users | Ready |
 | 06 | [Terraform](courses/06-terraform-for-beginners) | Build infrastructure from code | Ready |
 | 07 | [Ansible](courses/07-ansible-for-beginners) | Set up many servers the same way, every time | Ready |
@@ -53,6 +53,16 @@ Take the courses in order. Each one builds on the one before it.
 1. Click the green **Code** button above, then **Codespaces**, then **Create codespace on main**.
 2. Open a course folder from the table.
 3. Read `GETTING-STARTED.md`, then start Class 1.
+
+## Access and licence
+
+These courses are paid material. The repository is public while the courses are being reviewed and tested.
+
+- Enrolled students get access to the course they paid for.
+- The text, labs, diagrams, quizzes and assignments are the property of Coraxshift Academy and may not be copied, resold or used to deliver training without written permission.
+- Code samples in the labs may be used freely in your own projects and portfolio.
+
+See [LICENSE](LICENSE) for the full terms, and [CONTRIBUTING.md](CONTRIBUTING.md) to report a broken lab.
 
 ## About the academy
 
