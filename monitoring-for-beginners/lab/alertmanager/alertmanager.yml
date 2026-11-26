@@ -1,0 +1,12 @@
+route:
+  receiver: phone
+  group_by: [alertname]
+  group_wait: 5s        # wait a moment to bundle alerts together
+  group_interval: 30s
+  repeat_interval: 1h   # do not nag more than once an hour
+
+receivers:
+  - name: phone
+    webhook_configs:
+      - url: http://alert-receiver:5001/
+        send_resolved: true
