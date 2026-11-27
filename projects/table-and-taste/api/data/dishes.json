@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Wood-Fired Ribeye", "price": 42.0, "vegetarian": false, "spicy": false },
+  { "id": 2, "name": "Hearth Sourdough", "price": 9.5, "vegetarian": true, "spicy": false },
+  { "id": 3, "name": "Charred Pepper Pasta", "price": 24.0, "vegetarian": true, "spicy": true },
+  { "id": 4, "name": "Smoked Jollof Bowl", "price": 18.5, "vegetarian": false, "spicy": true }
+]
