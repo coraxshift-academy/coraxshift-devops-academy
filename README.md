@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="courses/02-linux-for-beginners/assets/banner.jpg" alt="Coraxshift DevOps Academy" width="100%">
+<img src="courses/01-linux-for-beginners/assets/banner.jpg" alt="Coraxshift DevOps Academy" width="100%">
 
 # Coraxshift DevOps Academy
 
@@ -32,20 +32,22 @@ You will not just read. You will **build it, break it on purpose, and fix it**, 
 
 Take the courses in order. Each one builds on the one before it.
 
-| # | Course | You will learn to | Status |
-|---|--------|-------------------|--------|
-| 01 | [Internet & Tech Essentials](courses/01-internet-tech-essentials) | See how the internet, servers and apps really work | Ready |
-| 02 | [Linux for Beginners](courses/02-linux-for-beginners) | Move around a server and run it with confidence | Ready |
-| 03 | [Bash Scripting](courses/03-bash-scripting-for-beginners) | Automate boring work with small scripts | Ready |
-| 04 | [Git & GitHub](courses/04-git-and-github-for-beginners) | Track changes and work in a team | Beta, being tested |
-| 05 | [Software Delivery Lifecycle](courses/05-software-delivery-lifecycle-for-beginners) | Understand how software goes from idea to users | Ready |
-| 06 | [Terraform](courses/06-terraform-for-beginners) | Build infrastructure from code | Ready |
-| 07 | [Ansible](courses/07-ansible-for-beginners) | Set up many servers the same way, every time | Ready |
-| 08 | [Docker](courses/08-docker-for-beginners) | Package an app so it runs anywhere | Beta, being tested |
-| 09 | [AWS](courses/09-aws-for-beginners) | Use the cloud safely, with costs under control | Beta, being tested |
-| 10 | [Kubernetes](courses/10-kubernetes-for-beginners) | Run and heal many containers | Beta, being tested |
-| 11 | [CI/CD](courses/11-cicd-for-beginners) | Check and ship every change automatically | Beta, being tested |
-| 12 | [Monitoring & Observability](courses/12-monitoring-for-beginners) | Know when something breaks, before users do | Beta, being tested |
+| Stage | Course | You build | Status |
+|---|---|---|---|
+| 00 | [Tech Essentials](courses/00-internet-tech-essentials) | Understand how the internet, servers and apps work (optional on-ramp) | Ready |
+| 01 | [Linux for Beginners](courses/01-linux-for-beginners) | A server running a live site | Ready |
+| 02 | [Linux Practical Assignment](courses/01-linux-for-beginners/course/assignments-overview.md) | Your first server project, assessed | Ready |
+| 03 | [Bash Scripting](courses/03-bash-scripting-for-beginners) | A backup and health script | Ready |
+| 04 | [Git & GitHub](courses/04-git-and-github-for-beginners) | Your work in a repo with real history | Beta, being tested |
+| 05 | [DevOps Fundamentals](courses/05-software-delivery-lifecycle-for-beginners) | A delivery plan for one app | Ready |
+| 06 | [Docker & Containers](courses/06-docker-for-beginners) | The app running in containers | Beta, being tested |
+| 07 | [CI/CD](courses/07-cicd-for-beginners) | A pipeline that ships on every push | Beta, being tested |
+| 08 | [Terraform](courses/08-terraform-for-beginners) | Infrastructure written as code | Ready |
+| 09 | [Ansible](courses/09-ansible-for-beginners) | Servers configured by playbook | Ready |
+| 10 | [AWS](courses/10-aws-for-beginners) | The app live in the cloud | Beta, being tested |
+| 11 | [Kubernetes](courses/11-kubernetes-for-beginners) | The app self-healing in a cluster | Beta, being tested |
+| 12 | [Monitoring & Observability](courses/12-monitoring-for-beginners) | Dashboards, alerts and a runbook | Beta, being tested |
+| 13 | [Capstone Project](courses/13-capstone-project) | The whole path, proven and defended | Ready |
 
 **Ready** means the commands were run and checked. **Beta** means the course is written and partly checked, and we are finishing hands-on testing. Tell us if something does not match your screen.
 

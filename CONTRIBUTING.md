@@ -10,7 +10,7 @@ Run the lab again on a clean machine or a fresh Codespace. Most mismatches come 
 
 Open an issue and use the **Broken lab** template. Please include:
 
-1. The course and class, for example `02-linux-for-beginners`, Class 2.
+1. The course and class, for example `01-linux-for-beginners`, Class 2.
 2. The exact step number and the exact command you ran.
 3. What you expected to see, and what you actually saw.
 4. Your environment: Codespace, WSL2, macOS, a cloud VM or a local Linux install.
