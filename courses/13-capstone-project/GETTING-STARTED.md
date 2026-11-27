@@ -34,4 +34,4 @@ If any of those are missing, rebuild them now. Class 1 assumes they exist.
 
 ## ▶️ Step 3: Start Class 1
 
-Open [Class 1: Assemble the evidence](class-1.md). Bring a pen: you will draw the system before you write about it.
+Open [Class 1: Assemble the evidence](course/class-1.md). Bring a pen: you will draw the system before you write about it.

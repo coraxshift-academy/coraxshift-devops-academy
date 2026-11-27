@@ -30,17 +30,17 @@ You are not learning a new tool here. You are learning to **explain and defend**
 
 | Class | You will | Time |
 |---|---|---|
-| [1. Assemble the evidence](class-1.md) | Draw the real system and write the README that proves it | 2 hours |
-| [2. Rehearse an incident](class-2.md) | Break it on purpose, talk through it, recover it | 2 hours |
-| [3. Demo and reflect](class-3.md) | Present, take review, and plan what comes next | 2 hours |
+| [1. Assemble the evidence](course/class-1.md) | Draw the real system and write the README that proves it | 2 hours |
+| [2. Rehearse an incident](course/class-2.md) | Break it on purpose, talk through it, recover it | 2 hours |
+| [3. Demo and reflect](course/class-3.md) | Present, take review, and plan what comes next | 2 hours |
 
-Start with the [overview](00-overview.md), then follow the classes in order.
+Start with the [overview](course/00-overview.md), then follow the classes in order.
 
 ## How you are assessed
 
 Nothing here is marked by a quiz. You pass this course when you can show a working service and answer questions about it without notes: why this design, what breaks first, how you would know, and how you would recover.
 
-See [Assignment 12](assignment-12.md) for the submission checklist and [Troubleshooting](troubleshooting.md) if a step fails.
+See [Assignment 12](course/assignment-12.md) for the submission checklist and [Troubleshooting](course/troubleshooting.md) if a step fails.
 
 ## Cost
 

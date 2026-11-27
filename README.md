@@ -20,6 +20,14 @@ You do not need a tech background, a powerful laptop, or a paid account to begin
 
 You will not just read. You will **build it, break it on purpose, and fix it**, until it finally clicks.
 
+## What is in this repository
+
+| Folder | What it holds |
+|---|---|
+| `courses/` | The thirteen courses, each with its own README, Getting Started page and classes |
+| `labs/` | The runnable lab apps used in the lessons, including CoraxReads |
+| `showcase/` | Standalone sample web apps kept for reference, not part of the course path |
+
 ## Your learning path
 
 Take the courses in order. Each one builds on the one before it.
