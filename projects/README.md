@@ -6,15 +6,18 @@ Each one was designed and built by **Rukevwe Ubioworo**, co-mentor at Coraxshift
 
 | Project | What it is | Used in |
 |---|---|---|
-| [Table & Taste](table-and-taste) | Restaurant ordering and table reservation app (React + Vite) | Assignment pending link |
-| [AutoMarket](automarket) | Car marketplace with browse, filter and compare (React + Vite) | Assignment pending link |
-| [Sample site](sample-site) | Static site used for hosting and pipeline exercises | Assignment pending link |
+| [Table & Taste](table-and-taste) | Restaurant ordering and table reservation app (React + Vite) | Assignment link to be added |
+| [AutoMarket](automarket) | Car marketplace with browse, filter and compare (React + Vite) | Assignment link to be added |
 
 ## How students use them
 
 1. Read the project README before you touch the code.
 2. Follow the assignment page for the steps you are expected to complete.
 3. Keep your own copy. These are reference implementations, not files to edit in place.
+
+## Not from this folder
+
+The Linux assignment uses **2048**, the open-source game by Gabriele Cirulli, which students clone from GitHub. An offline copy sits in [`labs/2048`](../labs/2048) with its MIT licence intact. It is not Coraxshift work and must never be presented as ours.
 
 ## Credit and reuse
 
