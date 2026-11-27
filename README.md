@@ -26,7 +26,7 @@ You will not just read. You will **build it, break it on purpose, and fix it**, 
 |---|---|
 | `courses/` | The thirteen courses, each with its own README, Getting Started page and classes |
 | `labs/` | The runnable lab apps used in the lessons, including CoraxReads |
-| `showcase/` | Standalone sample web apps kept for reference, not part of the course path |
+| `projects/` | The reference applications students build and extend during assignments, built by Rukevwe Ubioworo |
 
 ## Your learning path
 
