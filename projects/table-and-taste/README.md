@@ -1,90 +1,148 @@
-# Table & Taste - Artisanal Restaurant Web Application
+# Table & Taste
 
-**Table & Taste** is a restaurant web application representing a culinary business anchored by wood-fired hearth cooking, California farm-to-table provenance, and warm hospitality.
+**Built by Rukevwe Ubioworo** · Coraxshift DevOps Academy reference project
 
-## Key Features & Pages
+A restaurant ordering and table reservation app. This is the codebase students inherit in the Docker and CI/CD courses: it was written by someone else, it has no packaging and no safety net, and the job is to make it build, containerise, test and ship.
 
-1. **Home Page (`HomePage.tsx`)**
-   - Immersive hero section with quick booking & online ordering CTAs
-   - Today's Chef Specials with live badges
-   - Popular categories carousel & navigation
-   - Featured culinary creations showcase
-   - Restaurant philosophy & heritage preview
-   - Live opening hours, service status, and customer reviews with verified badges
-   - Location, valet, and contact card
+## What is in here
 
-2. **Artisanal Menu (`MenuPage.tsx`)**
-   - 8 Culinary Categories: Starters, Main Courses, Burgers, Pizza, Pasta, Salads, Desserts, Drinks
-   - Instant search across dishes and descriptions
-   - Dietary & preference filters (All, Vegetarian only, Chef's Specials, Spicy only)
-   - Price range and sorting filters (Featured, Price: Low to High, Price: High to Low, Highest Rated)
-   - Detailed food cards with dietary indicators, pricing, ratings, and instant add-to-cart
+| Path | What it is |
+|---|---|
+| `src/` | The React app (pages, components, context) |
+| `api/` | A small Node.js API: dish data, `/health` and `/metrics` |
+| `tests/` | Three tests for the API, using Node's built-in test runner |
+| `Dockerfile` | Builds the React app, then serves it with nginx |
+| `Dockerfile.api` | Packages the API |
+| `docker-compose.yml` | Runs both services together |
+| `ci/github-actions.yml` | A pipeline you can copy to `.github/workflows/ci.yml` |
 
-3. **Food Item Details Modal (`FoodDetailModal.tsx`)**
-   - High-resolution culinary photography
-   - Dietary indicators (Vegetarian, Spicy, Gluten-Friendly, Chef Special)
-   - Custom culinary options (e.g., steak temperatures, pasta options, truffle additions)
-   - Special instructions text input for the hearth brigade
-   - Quantity selector and real-time total calculation
+## Prerequisites
 
-4. **Dining Cart (`CartPage.tsx`)**
-   - Itemized cart line items with custom options & kitchen notes
-   - In-place note editing and quantity increments/decrements
-   - Promo voucher application (`TASTE10`, `WELCOME`)
-   - Transparent financial breakdown: Subtotal, Delivery fee calculation ($3.99, free over $50), 9% tax, gratuity, and discounts
+1. Node.js 22 or newer. Check with `node --version`.
+2. Docker Desktop or Docker Engine. Check with `docker --version`.
+3. Nothing else. No accounts, no cloud.
 
-5. **Checkout & Fulfillment (`CheckoutPage.tsx`)**
-   - Fulfillment selection: Direct Delivery (~35 mins) vs. Restaurant Pickup (~15 mins)
-   - Delivery address fields with suite/apt and delivery gate codes
-   - Kitchen & Courier Gratuity selector (10%, 15%, 20%, 25%, or custom $)
-   - Payment method selection: Credit Card, Apple / Google Pay, or Pay on Arrival
-   - Mock payment authorization simulation with state transitions
-   - Instant order confirmation ticket and direct redirection to live order tracker
+## Learning objectives
 
-6. **Table Reservations (`ReservationsPage.tsx`)**
-   - Date selector with party size picker (1 to 12+ guests)
-   - Interactive time slot selector with availability indicators (`Available`, `2 Left`, `Sold Out`)
-   - Seating atmosphere preferences: Main Dining Hall, Heated Garden Terrace, Chef's Interactive Counter, Private Velvet Booth
-   - Occasion selector and dietary/accessibility notes
-   - Instant booking confirmation ticket with reference code
+By the end of the Docker course you can:
 
-7. **My Orders & Live Tracker (`MyOrdersPage.tsx`)**
-   - Active and past order history
-   - Real-time 4-stage kitchen order progress tracker (`Order Received` -> `Hearth Cooking` -> `Out for Delivery` -> `Delivered`)
-   - Printable / digital itemized receipt viewer modal
-   - One-click reorder functionality to refill cart
+1. Write a multi-stage Dockerfile that builds a frontend and serves it with nginx.
+2. Explain why the build stage and the runtime stage are different images.
+3. Run two services with Compose and prove one waits for the other to be healthy.
+4. Add a health check and read it from `docker compose ps`.
 
-8. **My Reservations (`MyReservationsPage.tsx`)**
-   - Active upcoming and historical table bookings
-   - Party size, seating area, date, time, and special requests display
-   - Reservation cancellation capability
+## Step 1: Run the API locally
 
-9. **Customer Dashboard (`CustomerDashboard.tsx`)**
-   - Overview metrics: active orders, upcoming reservations, lifetime spend, and saved dishes
-   - Loyalty rewards points counter and credit redemption balance
-   - Saved favorite dishes shelf with instant add-to-cart
-   - Editable account profile and saved address management
+```bash
+npm install
+npm run api
+```
 
-10. **Restaurant Admin Operations (`AdminDashboard.tsx`)**
-    - Executive terminal with daily gross revenue, orders processed, table bookings, and kitchen status
-    - 7-Day interactive revenue performance chart and category sales distribution
-    - Live order status pipeline manager (`pending` -> `preparing` -> `ready` -> `on_the_way` -> `delivered` -> `cancelled`)
-    - Table reservation seating manager (`confirmed` -> `seated` -> `completed` -> `cancelled`)
-    - Menu inventory controller: instant stock toggling (`In Stock` / `Sold Out`), inline price editing, and add new dish modal
-    - VIP customer directory with loyalty balance and lifetime spend
+Expected output:
 
-11. **Restaurant Information (`RestaurantInfoPage.tsx`)**
-    - The Wood Hearth tradition and cooking philosophy
-    - Three gastronomic pillars: Farm-to-Table, Zero Shortcut Butchery, Low-Intervention Cellar
-    - Executive Chef profile and private dining & event buyout inquiries
+```text
+table-and-taste-api listening on 3000
+```
 
-12. **Contact & Location (`ContactPage.tsx`)**
-    - Interactive message dispatch form with inquiry categories
-    - Operating hours, address, phone, and email
-    - Valet parking, EV charging, and arrival instructions
+In a second terminal, ask for its health:
 
-## Tech Stack
-- **Framework:** React 18+ with TypeScript
-- **Styling:** Tailwind CSS with custom typography (`Playfair Display` serif & `Plus Jakarta Sans`)
-- **State Management:** Centralized React Context (`AppContext.tsx`) with automatic `localStorage` persistence
-- **Icons:** `lucide-react`
+```bash
+curl http://localhost:3000/health
+```
+
+Expected output:
+
+```json
+{"status":"ok","service":"table-and-taste-api","uptime_seconds":7}
+```
+
+The uptime number will be different on your machine. That is normal.
+
+## Step 2: Run the tests
+
+```bash
+npm test
+```
+
+Expected output:
+
+```text
+# tests 3
+# pass 3
+# fail 0
+```
+
+## Step 3: Run the frontend
+
+```bash
+npm run dev
+```
+
+Expected output:
+
+```text
+  VITE v7  ready in 400 ms
+  Local:   http://localhost:5173/
+```
+
+Open that address. The menu, cart and reservation pages should load.
+
+## Step 4: Build and run with Docker Compose
+
+```bash
+docker compose up --build
+```
+
+Expected output, near the end:
+
+```text
+✔ Container table-and-taste-api-1  Healthy
+✔ Container table-and-taste-web-1  Started
+```
+
+Check the health of both services:
+
+```bash
+docker compose ps
+```
+
+Expected output:
+
+```text
+NAME                       SERVICE   STATUS
+table-and-taste-api-1      api       Up (healthy)
+table-and-taste-web-1      web       Up
+```
+
+Open http://localhost:8080 for the site and http://localhost:3000/metrics for the metrics.
+
+## Step 5: Clean up
+
+Stop the containers and remove the images built in this lab:
+
+```bash
+docker compose down --rmi local
+```
+
+Expected output:
+
+```text
+✔ Container table-and-taste-web-1  Removed
+✔ Container table-and-taste-api-1  Removed
+```
+
+## What you learned
+
+1. `docker build` turns a Dockerfile into an image.
+2. A multi-stage build keeps the compiler out of the final image, so it stays small.
+3. `docker compose up` starts every service in the file, and `depends_on` with `condition: service_healthy` makes one wait for another.
+4. `curl` proves a service answers, which is stronger evidence than a container saying "Up".
+5. `/metrics` is what a monitoring system scrapes, so the app has to expose it.
+
+## Cost
+
+$0. Everything here runs on your own machine.
+
+## Credit
+
+Built by Rukevwe Ubioworo. Part of the paid Coraxshift course material, see the repository [LICENSE](../../LICENSE).
