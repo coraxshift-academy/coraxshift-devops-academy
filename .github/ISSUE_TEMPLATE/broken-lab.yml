@@ -1,0 +1,45 @@
+name: Broken lab
+description: A command or step in a lab did not work as written
+title: "[Lab] "
+labels: ["lab-issue"]
+body:
+  - type: input
+    id: course
+    attributes:
+      label: Course and class
+      placeholder: 02-linux-for-beginners, Class 2
+    validations:
+      required: true
+  - type: textarea
+    id: step
+    attributes:
+      label: Step number and command
+      description: Copy the exact command you ran.
+      placeholder: Step 4, sudo systemctl status nginx
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what you saw
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where you ran it
+      options:
+        - GitHub Codespace
+        - WSL2 on Windows
+        - macOS
+        - Linux VM or cloud server
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Full error message
+      description: Paste as text if you can.
+    validations:
+      required: false

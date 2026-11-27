@@ -36,7 +36,7 @@ You can find your way around and set things up. Today you learn to **keep a serv
 **Run it:**
 
 ```bash
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 sudo service nginx start
 sudo service nginx status
 ```
@@ -321,7 +321,7 @@ Notice the `x` letters that appeared in `-rwxrwxr-x`. That's the change you made
 
 **If yours looks different:**
 
-- `No such file or directory` when running: you are not in the course folder. Run `cd /workspaces/linux-for-beginners`.
+- `No such file or directory` when running: you are not in the course folder. Run `cd /workspaces/coraxshift-devops-academy`.
 - `curl: (7) Failed to connect`: Nginx is stopped. Run `sudo service nginx start`.
 - Strange characters or `command not found` on the first line: the shebang must be the very first line, exactly `#!/bin/bash`.
 

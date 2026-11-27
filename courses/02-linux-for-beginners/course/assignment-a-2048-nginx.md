@@ -46,7 +46,7 @@ GitHub (2048 source) --git clone--> ~/apps/2048 --copy the game files--> /var/ww
 **Run it:**
 
 ```bash
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 cat /etc/os-release | head -n 1
 nginx -v
 git --version

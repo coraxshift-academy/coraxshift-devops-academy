@@ -19,4 +19,4 @@ To preview the production build locally before copying it to Nginx:
 npm run preview -- --host 0.0.0.0
 ```
 
-For the full Codespaces deployment and recovery steps, follow [Week 2 Assignment 2A](../../modules/02-linux/assignment-2a-react-nginx.md).
+For the full Codespaces deployment and recovery steps, follow [Week 2 Assignment 2A](../../courses/02-linux-for-beginners/course/assignment-a-2048-nginx.md).

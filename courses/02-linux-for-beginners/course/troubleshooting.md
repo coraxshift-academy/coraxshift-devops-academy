@@ -29,7 +29,7 @@ When something doesn't work, go through these in order. Change **one** thing at 
 
 | What you see | Likely reason | Safe next step |
 |---|---|---|
-| `No such file or directory` | You're in a different folder, or a typo | Run `pwd`. Go home base with `cd /workspaces/linux-for-beginners`. Check spelling and capital letters. |
+| `No such file or directory` | You're in a different folder, or a typo | Run `pwd`. Go home base with `cd /workspaces/coraxshift-devops-academy`. Check spelling and capital letters. |
 | `command not found` | Typo, or the tool isn't installed | Check spelling. For Nginx: `sudo apt install -y nginx`. |
 | `Permission denied` running a script | The script isn't executable | `chmod +x <script>` (Class 3, Step 5) |
 | `Permission denied` on a system file | It needs admin rights | Add `sudo` only if the course step uses it. Don't `chmod` system files. |
@@ -94,10 +94,10 @@ When something doesn't work, go through these in order. Change **one** thing at 
 Codespaces stop when idle, and programs don't restart on their own. Run:
 
 ```bash
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 sudo service nginx start
 cd ~/apps/uptime-kuma && nohup node server/server.js --host=127.0.0.1 > ~/uptime-kuma.log 2>&1 &
-cd /workspaces/linux-for-beginners
+cd /workspaces/coraxshift-devops-academy
 ```
 
 (The Uptime Kuma line only applies once you've installed it in B.)

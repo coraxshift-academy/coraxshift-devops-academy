@@ -56,7 +56,7 @@
 | 🆘 Stuck? | [Troubleshooting](course/troubleshooting.md) | any time |
 
 > [!TIP]
-> Work through the steps **in order**. Each class starts with `cd /workspaces/linux-for-beginners`, so every command runs from the same place.
+> Work through the steps **in order**. Each class starts with `cd /workspaces/coraxshift-devops-academy`, so every command runs from the same place.
 
 ## 🛡️ Safety rules
 
