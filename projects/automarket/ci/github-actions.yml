@@ -1,0 +1,30 @@
+# Copy this file to .github/workflows/ci.yml to turn it on.
+# It runs the tests, then builds both container images without pushing them anywhere.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run the API tests
+        run: npm test
+
+      - name: Build the web image
+        run: docker build -t automarket:${GITHUB_SHA} .
+
+      - name: Build the API image
+        run: docker build -f Dockerfile.api -t automarket-api:${GITHUB_SHA} .
