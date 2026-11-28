@@ -1,0 +1,6 @@
+[
+  { "id": 1, "make": "Volkswagen", "model": "Golf GTI", "year": 2021, "price": 24500, "fuel": "petrol", "transmission": "manual" },
+  { "id": 2, "make": "Tesla", "model": "Model 3", "year": 2023, "price": 38900, "fuel": "electric", "transmission": "automatic" },
+  { "id": 3, "make": "BMW", "model": "320d Touring", "year": 2020, "price": 27900, "fuel": "diesel", "transmission": "automatic" },
+  { "id": 4, "make": "Toyota", "model": "Corolla Hybrid", "year": 2022, "price": 23100, "fuel": "hybrid", "transmission": "automatic" }
+]

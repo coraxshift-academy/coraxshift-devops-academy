@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8081:80"
+    depends_on:
+      api:
+        condition: service_healthy
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3001/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
