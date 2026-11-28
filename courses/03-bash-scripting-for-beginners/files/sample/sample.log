@@ -1,0 +1,8 @@
+2026-11-28 07:01:02 INFO  server started on port 3000
+2026-11-28 07:02:11 INFO  GET / 200 12ms
+2026-11-28 07:03:44 WARN  slow query took 1200ms
+2026-11-28 07:04:02 ERROR failed to connect to database: timeout
+2026-11-28 07:05:19 INFO  GET /health 200 3ms
+2026-11-28 07:06:33 ERROR failed to connect to database: timeout
+2026-11-28 07:07:48 ERROR failed to connect to database: timeout
+2026-11-28 07:08:02 WARN  disk usage at 82%

@@ -9,6 +9,10 @@
 [![Time](https://img.shields.io/badge/time-about%2010%20hours-f59e0b?style=for-the-badge&labelColor=0b1020)](#️-how-long-it-takes)
 [![Cost](https://img.shields.io/badge/cost%20to%20practise-%240-22c55e?style=for-the-badge&labelColor=0b1020)](GETTING-STARTED.md)
 
+> **The code for this course is in [`files/`](files). Three working scripts and a sample log, so you never have to write a script from a blank page.**
+> Start with [`files/README.md`](files/README.md): prerequisites, learning objectives, both the local and the cloud way to run it, expected output for every step, and cleanup.
+
+
 ### 👋 Tired of doing the same boring task again and again? Let the computer do it.
 
 **Coraxshift DevOps Academy** · *Learn. Build. Deploy. Grow.*
