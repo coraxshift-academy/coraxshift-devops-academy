@@ -9,6 +9,10 @@
 [![Time](https://img.shields.io/badge/time-about%2011%20hours-f59e0b?style=for-the-badge&labelColor=0b1020)](#️-how-long-it-takes)
 [![Cost](https://img.shields.io/badge/cost%20to%20practise-%240-22c55e?style=for-the-badge&labelColor=0b1020)](GETTING-STARTED.md)
 
+> **The code for this course is in [`lab/`](lab). A full Prometheus, Grafana, Loki and Alertmanager stack that starts with one command.**
+> Start with [`lab/README.md`](lab/README.md): prerequisites, learning objectives, both the local and the cloud way to run it, expected output for every step, and cleanup.
+
+
 ### 👋 See what your systems are doing, and hear about trouble before your users do.
 
 **Coraxshift DevOps Academy** · *Learn. Build. Deploy. Grow.*

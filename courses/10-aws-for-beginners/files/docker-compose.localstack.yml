@@ -1,0 +1,15 @@
+# LocalStack gives you AWS services on your own machine, for free.
+# Nothing here touches your real AWS account.
+services:
+  localstack:
+    image: localstack/localstack:3.5
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3,iam,sts
+      DEBUG: 0
+    volumes:
+      - localstack-data:/var/lib/localstack
+
+volumes:
+  localstack-data:

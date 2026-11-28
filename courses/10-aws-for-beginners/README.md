@@ -22,6 +22,10 @@
 > [!WARNING]
 > **DRAFT, not yet tested in a live AWS account.** The steps were written from AWS's documented behaviour and the shell commands were syntax-checked, but nobody has yet run every click in a real account. AWS also moves buttons around. Your instructor will confirm this notice is gone before you start.
 
+> **The code for this course is in [`files/`](files). Every AWS command is a runnable script, and LocalStack lets you practise them for free before touching a real account.**
+> Start with [`files/README.md`](files/README.md): prerequisites, learning objectives, both the local and the cloud way to run it, expected output for every step, and cleanup.
+
+
 ## 🎯 What you will be able to do
 
 | | |

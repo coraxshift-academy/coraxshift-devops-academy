@@ -9,6 +9,10 @@
 [![Time](https://img.shields.io/badge/time-about%2010%20hours-f59e0b?style=for-the-badge&labelColor=0b1020)](#️-how-long-it-takes)
 [![Cost](https://img.shields.io/badge/cost%20to%20practise-%240-22c55e?style=for-the-badge&labelColor=0b1020)](GETTING-STARTED.md)
 
+> **The code for this course is in [`files/`](files). A working app with passing tests, plus the CI and CD workflow files to copy into your repository.**
+> Start with [`files/README.md`](files/README.md): prerequisites, learning objectives, both the local and the cloud way to run it, expected output for every step, and cleanup.
+
+
 ### 👋 Check every change automatically, deliver it safely, and roll back when something goes wrong.
 
 **Coraxshift DevOps Academy** · *Learn. Build. Deploy. Grow.*

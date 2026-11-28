@@ -1,0 +1,29 @@
+---
+- name: Show which host we are configuring
+  ansible.builtin.debug:
+    msg: "Configuring {{ inventory_hostname }}"
+
+- name: Create the web root
+  ansible.builtin.file:
+    path: "{{ web_root }}"
+    state: directory
+    mode: "0755"
+
+- name: Copy the page
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: "{{ web_root }}/index.html"
+    mode: "0644"
+  notify: Reload nginx
+
+- name: Confirm the page exists
+  ansible.builtin.stat:
+    path: "{{ web_root }}/index.html"
+  register: page
+
+- name: Fail loudly if the page is missing
+  ansible.builtin.assert:
+    that:
+      - page.stat.exists
+    fail_msg: "The page was not written. Stop and read the task above."
+    success_msg: "Page written to {{ web_root }}/index.html"

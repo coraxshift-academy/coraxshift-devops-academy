@@ -1,0 +1,6 @@
+---
+- name: Set up a web server
+  hosts: local
+  gather_facts: true
+  roles:
+    - nginx

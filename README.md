@@ -26,6 +26,7 @@ You will not just read. You will **build it, break it on purpose, and fix it**, 
 |---|---|
 | `courses/` | The thirteen courses, each with its own README, Getting Started page and classes |
 | `labs/` | The runnable lab apps used in the lessons, including CoraxReads |
+| `courses/*/files/` | The actual code for each course: Dockerfiles, Terraform, Ansible roles, Kubernetes manifests. Copy, paste, run |
 | `projects/` | The reference applications students build and extend during assignments, built by Rukevwe Ubioworo |
 
 ## Your learning path

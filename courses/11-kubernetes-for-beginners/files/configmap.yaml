@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: web-config
+  namespace: coraxshift
+data:
+  SITE_NAME: "Coraxshift Practice Site"
+  NODE_ENV: "production"

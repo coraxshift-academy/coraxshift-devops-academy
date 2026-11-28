@@ -9,6 +9,10 @@
 [![Time](https://img.shields.io/badge/time-about%2010%20hours-f59e0b?style=for-the-badge&labelColor=0b1020)](#️-how-long-it-takes)
 [![Cost](https://img.shields.io/badge/cost%20to%20practise-%240-22c55e?style=for-the-badge&labelColor=0b1020)](GETTING-STARTED.md)
 
+> **The code for this course is in [`files/`](files).** Every command in these classes is backed by a real file you can copy, paste and run: no guessing, no generating code elsewhere.
+> Start with [`files/README.md`](files/README.md). It lists the prerequisites, the learning objectives, both the local and the cloud way to run everything, the expected output for each step, and the cleanup.
+
+
 ### 👋 Run a program on a cluster that keeps it running, updates it safely and heals itself.
 
 **Coraxshift DevOps Academy** · *Learn. Build. Deploy. Grow.*
