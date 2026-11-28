@@ -1,5 +1,8 @@
-node_modules
-npm-debug.log
-.git
-Dockerfile
-README.md
+Dedeployment_command,md 
+tests
+screenshot 
+Openshift
+kustomized
+fastapi_app
+ArchitectureDiagram 
+.github/*

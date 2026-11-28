@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mypython-app
+  namespace: ubiowororuki-dev
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: mypython-app
+  template:
+    metadata:
+      labels:
+        app: mypython-app
+    spec:
+      containers:
+        - name: mypython-app
+          image: quay.io/ubiowororuki/mypython-app:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: FLASK_ENV
+              value: production
