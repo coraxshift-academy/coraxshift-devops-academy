@@ -1,0 +1,7 @@
+# Never commit real secrets. This file shows the shape only.
+# Create your encrypted copy with:
+#   ansible-vault create secrets.yml
+# Then run with:
+#   ansible-playbook site.yml --ask-vault-pass
+db_password: "REPLACE_ME"
+api_token: "REPLACE_ME"

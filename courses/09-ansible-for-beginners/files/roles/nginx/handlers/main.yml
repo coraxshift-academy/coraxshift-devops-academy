@@ -1,0 +1,4 @@
+---
+- name: Reload nginx
+  ansible.builtin.debug:
+    msg: "Reloading nginx. On a real server this is: systemctl reload nginx"

@@ -1,0 +1,4 @@
+# Copy this file to terraform.tfvars and change what you need.
+project_name = "coraxshift"
+web_port     = 8080
+web_image    = "nginx:alpine"
